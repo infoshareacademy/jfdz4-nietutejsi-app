@@ -2,7 +2,9 @@ import React from 'react';
 import {
   Table,
   DropdownButton,
-  MenuItem
+  MenuItem,
+  FormGroup,
+  FormControl
 } from 'react-bootstrap'
 class UserList extends React.Component {
     
@@ -28,6 +30,9 @@ class UserList extends React.Component {
           <div>
             <hr/>
             <p style={{color: 'grey'}}>User list</p>
+            <FormGroup>
+              <FormControl/>
+            </FormGroup>
             <DropdownButton title="Sort by">
               <MenuItem>Last login</MenuItem>
               <MenuItem>Alphabetic</MenuItem>
