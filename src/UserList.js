@@ -24,24 +24,12 @@ class UserList extends React.Component {
             <table>
                 <thead>
                 <tr>
-                    <th>
-                        id
-                    </th>
-                    <th>
-                        Username
-                    </th>
-                    <th>
-                        First Name
-                    </th>
-                    <th>
-                        Last Name
-                    </th>
-                    <th>
-                        E-mail
-                    </th>
-                    <th>
-                        Last login
-                    </th>
+                    <th>id</th>
+                    <th>Username</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>E-mail</th>
+                    <th>Last login</th>
                 </tr>
                 </thead>
                 <tbody>
