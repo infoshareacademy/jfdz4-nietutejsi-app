@@ -12,7 +12,8 @@ class UserList extends React.Component {
         super(props)
         
         this.state = {
-            users: []
+            users: [],
+            searchValue: ''
         }
 
         fetch(
@@ -24,6 +25,10 @@ class UserList extends React.Component {
               users: users
           })
         )
+
+      this.handleSearchUpdate = event => this.setState ({
+        searchValue: event.target.value
+      })
     }
     render() {
         return (
@@ -31,7 +36,9 @@ class UserList extends React.Component {
             <hr/>
             <p style={{color: 'grey'}}>User list</p>
             <FormGroup>
-              <FormControl/>
+              <FormControl
+                onChange={this.handleSearchUpdate}
+              />
             </FormGroup>
             <DropdownButton title="Sort by">
               <MenuItem>Last login</MenuItem>
@@ -51,7 +58,15 @@ class UserList extends React.Component {
                 </thead>
                 <tbody>
                 {
-                  this.state.users.map(
+                  this.state.users.filter(
+                      user => (
+                          this.state.searchValue === '' ? true : [
+                              user.name,
+                              user.username,
+                              user.surname
+                            ].includes(this.state.searchValue)
+                      )
+                  ).map(
                     user => (
                       <tr key={user.id}>
                           <td>
