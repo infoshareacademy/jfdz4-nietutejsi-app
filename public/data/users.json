@@ -4,6 +4,7 @@
     "username": "jckspr87",
     "name": "Jack",
     "surname": "Sparrow",
+    "gender": "Male",
     "email": "jack.sparrow@test.com",
     "lastLogin": "09-05-2017"
   },
@@ -12,6 +13,7 @@
     "username": "allison97",
     "name": "Allison",
     "surname": "Jackson",
+    "gender": "Female",
     "email": "allisonj@test.com",
     "lastLogin": "14-05-2017"
   },
@@ -20,6 +22,7 @@
     "username": "frytekiuszxx",
     "name": "Brian",
     "surname": "Frytek",
+    "gender": "Male",
     "email": "frytekiusz@test.com",
     "lastLogin": "01-01-2017"
   }

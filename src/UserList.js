@@ -40,6 +40,7 @@ class UserList extends React.Component {
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>E-mail</th>
+                    <th>Gender</th>
                     <th>Last login</th>
                 </tr>
                 </thead>
@@ -62,6 +63,9 @@ class UserList extends React.Component {
                           </td>
                           <td>
                               {user.email}
+                          </td>
+                          <td>
+                              {user.gender}
                           </td>
                           <td>
                               {user.lastLogin}
