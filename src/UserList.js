@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Table
+} from 'react-bootstrap'
 class UserList extends React.Component {
     
     constructor(props){
@@ -21,7 +24,7 @@ class UserList extends React.Component {
     render() {
         return (
           <div>
-            <table>
+            <Table>
                 <thead>
                 <tr>
                     <th>id</th>
@@ -60,7 +63,7 @@ class UserList extends React.Component {
                   )
                 }
                 </tbody>
-            </table>
+            </Table>
             </div>
         )
     }
