@@ -24,7 +24,7 @@ class UserList extends React.Component {
     render() {
         return (
           <div>
-            <Table>
+            <Table hover striped responsive>
                 <thead>
                 <tr>
                     <th>id</th>
