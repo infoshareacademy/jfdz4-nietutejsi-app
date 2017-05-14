@@ -1,5 +1,4 @@
 import React from 'react';
-
 class UserList extends React.Component {
     
     constructor(props){
@@ -21,27 +20,28 @@ class UserList extends React.Component {
     }
     render() {
         return (
+          <div>
             <table>
                 <thead>
                 <tr>
-                    <td>
+                    <th>
                         id
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Username
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         First Name
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Last Name
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         E-mail
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Last login
-                    </td>
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -73,6 +73,7 @@ class UserList extends React.Component {
                 }
                 </tbody>
             </table>
+            </div>
         )
     }
 }
