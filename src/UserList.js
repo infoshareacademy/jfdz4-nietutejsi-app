@@ -64,7 +64,7 @@ class UserList extends React.Component {
                               user.name,
                               user.username,
                               user.surname
-                            ].includes(this.state.searchValue)
+                            ].some(searchValue => searchValue.includes(this.state.searchValue))
                       )
                   ).map(
                     user => (
