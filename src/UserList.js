@@ -1,6 +1,8 @@
 import React from 'react';
 import {
-  Table
+  Table,
+  DropdownButton,
+  MenuItem
 } from 'react-bootstrap'
 class UserList extends React.Component {
     
@@ -24,6 +26,12 @@ class UserList extends React.Component {
     render() {
         return (
           <div>
+            <hr/>
+            <p style={{color: 'grey'}}>User list</p>
+            <DropdownButton title="Sort by">
+              <MenuItem>Last login</MenuItem>
+              <MenuItem>Alphabetic</MenuItem>
+            </DropdownButton>
             <Table hover striped responsive>
                 <thead>
                 <tr>
