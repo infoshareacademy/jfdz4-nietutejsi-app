@@ -25,5 +25,68 @@
     "gender": "Male",
     "email": "frytekiusz@test.com",
     "lastLogin": "01-01-2017"
+  },
+  {
+    "id": 4,
+    "username": "johnmahjong",
+    "name": "Oswald",
+    "surname": "Hobbes",
+    "gender": "Male",
+    "email": "hobbes.o@test.com",
+    "lastLogin": "01-05-2017"
+  },
+  {
+    "id": 5,
+    "username": "bluebear",
+    "name": "Roman",
+    "surname": "Jager",
+    "gender": "Male",
+    "email": "bluebear1958@test.com",
+    "lastLogin": "27-04-2017"
+  },
+  {
+    "id": 6,
+    "username": "greatbuddy",
+    "name": "Cilla",
+    "surname": "Jiang",
+    "gender": "Female",
+    "email": "cjiang@test.com",
+    "lastLogin": "12-04-2017"
+  },
+  {
+    "id": 7,
+    "username": "acidiclow",
+    "name": "Janine",
+    "surname": "Niftrik",
+    "gender": "Female",
+    "email": "acidicflow55@test.com",
+    "lastLogin": "04-05-2017"
+  },
+  {
+    "id": 8,
+    "username": "sandstonejumping",
+    "name": "Desideria",
+    "surname": "Sawyer",
+    "gender": "Female",
+    "email": "dessaw@test.com",
+    "lastLogin": "02-03-2017"
+  },
+  {
+    "id": 9,
+    "username": "elevenwan",
+    "name": "Sile",
+    "surname": "Clinton",
+    "gender": "Male",
+    "email": "wan11@test.com",
+    "lastLogin": "18-02-2017"
+  },
+  {
+    "id": 10,
+    "username": "beautifulgarlic",
+    "name": "Igerna",
+    "surname": "Kasun",
+    "gender": "Female",
+    "email": "frytekiusz@test.com",
+    "lastLogin": "09-01-2017"
   }
 ]
