@@ -35,6 +35,13 @@ class UserList extends React.Component {
             phrase => phrase !== 'search'
         ).concat(this.state.searchValue === '' ? [] : 'search')
       }))
+
+      this.handleFirstNameSort = () => this.setState({
+        activeFilters: this.state.activeFilters.concat('sortByName'),
+        users: this.state.users.sort((a, b) =>
+          +(a.name.toLowerCase() > b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1
+        )
+      })
     }
     render() {
         return (
@@ -47,7 +54,10 @@ class UserList extends React.Component {
               />
             </FormGroup>
             <DropdownButton title={this.state.sortButtonValue}>
-              <MenuItem>First Name</MenuItem>
+              <MenuItem
+                onClick={this.handleFirstNameSort}>
+                First Name
+              </MenuItem>
               <MenuItem>Last login</MenuItem>
             </DropdownButton>
             <DropdownButton title="Ascending">
