@@ -48,11 +48,11 @@ class UserList extends React.Component {
 
       this.handleAscOrder = () => this.setState({
         sortOrder: 'Ascending'
-      })
+      }, this.handleFirstNameSort)
 
       this.handleDscOrder = () => this.setState({
         sortOrder: 'Descending'
-      })
+      }, this.handleFirstNameSort)
     }
     render() {
         return (
