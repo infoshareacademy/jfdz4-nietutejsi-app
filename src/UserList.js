@@ -4,7 +4,7 @@ import {
   DropdownButton,
   MenuItem,
   FormGroup,
-  FormControl
+  FormControl,
 } from 'react-bootstrap'
 class UserList extends React.Component {
 
@@ -15,7 +15,8 @@ class UserList extends React.Component {
             users: [],
             sortButtonValue: 'Sort by ',
             activeFilters: [],
-            searchValue: ''
+            searchValue: '',
+            sortOrder: ''
         }
 
         fetch(
@@ -42,6 +43,14 @@ class UserList extends React.Component {
           +(a.name.toLowerCase() > b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1
         )
       })
+
+      this.handleAscOrder = () => this.setState({
+        sortOrder: 'Ascending'
+      })
+
+      this.handleDscOrder = () => this.setState({
+        sortOrder: 'Descending'
+      })
     }
     render() {
         return (
@@ -60,8 +69,15 @@ class UserList extends React.Component {
               </MenuItem>
               <MenuItem>Last login</MenuItem>
             </DropdownButton>
-            <DropdownButton title="Ascending">
-              <MenuItem>Descending</MenuItem>
+            <DropdownButton title="Sort order">
+              <MenuItem
+                onClick={this.handleAscOrder}>
+                Ascending
+              </MenuItem>
+              <MenuItem
+                onClick={this.handleDscOrder}>
+                Descending
+              </MenuItem>
             </DropdownButton>
             <Table hover striped responsive>
                 <thead>
