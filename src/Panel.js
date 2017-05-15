@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 import {
     Grid,
     Row,
     Col,
-    Table} from 'react-boostrap'
+    Table} from 'react-bootsrap';
 class Panel extends React.Component {
 
     constructor (props) {
