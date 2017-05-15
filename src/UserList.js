@@ -47,8 +47,8 @@ class UserList extends React.Component {
               />
             </FormGroup>
             <DropdownButton title={this.state.sortButtonValue}>
+              <MenuItem>First Name</MenuItem>
               <MenuItem>Last login</MenuItem>
-              <MenuItem>Alphabetic</MenuItem>
             </DropdownButton>
             <DropdownButton title="Ascending">
               <MenuItem>Descending</MenuItem>
