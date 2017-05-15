@@ -13,6 +13,7 @@ class UserList extends React.Component {
         
         this.state = {
             users: [],
+            activeFilters: [],
             searchValue: ''
         }
 
@@ -28,7 +29,11 @@ class UserList extends React.Component {
 
       this.handleSearchUpdate = event => this.setState ({
         searchValue: event.target.value
-      })
+      }, () => this.setState({
+        activeFilters: this.state.activeFilters.filter(
+            phrase => phrase !== 'search'
+        ).concat(this.state.searchValue === '' ? [] : 'search')
+      }))
     }
     render() {
         return (
