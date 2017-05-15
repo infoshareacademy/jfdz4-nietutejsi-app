@@ -7,12 +7,13 @@ import {
   FormControl
 } from 'react-bootstrap'
 class UserList extends React.Component {
-    
+
     constructor(props){
         super(props)
-        
+
         this.state = {
             users: [],
+            sortButtonValue: 'Sort by ',
             activeFilters: [],
             searchValue: ''
         }
@@ -45,7 +46,7 @@ class UserList extends React.Component {
                 onChange={this.handleSearchUpdate}
               />
             </FormGroup>
-            <DropdownButton title="Sort by">
+            <DropdownButton title={this.state.sortButtonValue}>
               <MenuItem>Last login</MenuItem>
               <MenuItem>Alphabetic</MenuItem>
             </DropdownButton>
