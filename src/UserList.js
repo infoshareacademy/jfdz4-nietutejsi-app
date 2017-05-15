@@ -49,6 +49,9 @@ class UserList extends React.Component {
               <MenuItem>Last login</MenuItem>
               <MenuItem>Alphabetic</MenuItem>
             </DropdownButton>
+            <DropdownButton title="Ascending">
+              <MenuItem>Descending</MenuItem>
+            </DropdownButton>
             <Table hover striped responsive>
                 <thead>
                 <tr>
