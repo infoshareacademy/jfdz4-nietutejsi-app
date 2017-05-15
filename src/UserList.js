@@ -40,7 +40,7 @@ class UserList extends React.Component {
       this.handleFirstNameSort = () => this.setState({
         activeFilters: this.state.activeFilters.includes('sortByName') ? this.state.activeFilters : this.state.activeFilters.concat('sortByName'),
         users: this.state.users.sort((a, b) =>
-          +(a.name.toLowerCase() > b.name.toLowerCase()) || +(a.name.toLowerCase() === b.name.toLowerCase()) - 1
+            a.name !== b.name ? a.name < b.name ? -1 : 1 : 0
         )
       })
 
