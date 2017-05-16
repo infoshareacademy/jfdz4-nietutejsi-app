@@ -4,10 +4,13 @@ import {Grid} from 'react-bootstrap'
 import './App.css';
 import Panel from './Panel';
 
-const App = () => (
-<Grid>
-    <Panel/>
-</Grid>
-)
+class App extends React.Component {
+    render() {
+        return (
+            <Grid>
+                <Panel/>
+            </Grid>
+        )
+    }
+}
 
-export default App;
