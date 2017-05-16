@@ -3,7 +3,7 @@ import {
     Grid,
     Row,
     Col,
-    Table} from 'react-bootsrap';
+    } from 'react-bootstrap';
 class Panel extends React.Component {
 
     constructor (props) {
