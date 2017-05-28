@@ -45,14 +45,6 @@ class UserList extends React.Component {
             a.name !== b.name ? a.name < b.name ? -1 : 1 : 0
         ).reverse()
       })
-
-      this.handleAscOrder = () => this.setState({
-        sortOrder: 'Ascending'
-      }, this.handleFirstNameSort)
-
-      this.handleDscOrder = () => this.setState({
-        sortOrder: 'Descending'
-      }, this.handleFirstNameSort)
     }
     render() {
         return (
@@ -70,16 +62,6 @@ class UserList extends React.Component {
                 First Name
               </MenuItem>
               <MenuItem>Last login</MenuItem>
-            </DropdownButton>
-            <DropdownButton title="Sort order">
-              <MenuItem
-                onClick={this.handleAscOrder}>
-                Ascending
-              </MenuItem>
-              <MenuItem
-                onClick={this.handleDscOrder}>
-                Descending
-              </MenuItem>
             </DropdownButton>
             <Table hover striped responsive>
                 <thead>
