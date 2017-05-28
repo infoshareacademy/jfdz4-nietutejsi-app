@@ -6,7 +6,8 @@
     "surname": "Sparrow",
     "gender": "Male",
     "email": "jack.sparrow@test.com",
-    "lastLogin": "09-05-2017"
+    "lastLogin": "09-05-2017",
+    "lastLoginGetTime": 1496959200000
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "surname": "Jackson",
     "gender": "Female",
     "email": "allisonj@test.com",
-    "lastLogin": "14-05-2017"
+    "lastLogin": "14-05-2017",
+    "lastLoginGetTime": 1497391200000
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "surname": "Frytek",
     "gender": "Male",
     "email": "frytekiusz@test.com",
-    "lastLogin": "01-01-2017"
+    "lastLogin": "01-01-2017",
+    "lastLoginGetTime": 1485903600000
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "surname": "Hobbes",
     "gender": "Male",
     "email": "hobbes.o@test.com",
-    "lastLogin": "01-05-2017"
+    "lastLogin": "01-05-2017",
+    "lastLoginGetTime": 1496268000000
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "surname": "Jager",
     "gender": "Male",
     "email": "bluebear1958@test.com",
-    "lastLogin": "27-04-2017"
+    "lastLogin": "27-04-2017",
+    "lastLoginGetTime": 1495836000000
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "surname": "Jiang",
     "gender": "Female",
     "email": "cjiang@test.com",
-    "lastLogin": "12-04-2017"
+    "lastLogin": "12-04-2017",
+    "lastLoginGetTime": 1494540000000
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "surname": "Niftrik",
     "gender": "Female",
     "email": "acidicflow55@test.com",
-    "lastLogin": "04-05-2017"
+    "lastLogin": "04-05-2017",
+    "lastLoginGetTime": 1496527200000
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "surname": "Sawyer",
     "gender": "Female",
     "email": "dessaw@test.com",
-    "lastLogin": "02-03-2017"
+    "lastLogin": "02-03-2017",
+    "lastLoginGetTime": 1491084000000
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "surname": "Clinton",
     "gender": "Male",
     "email": "wan11@test.com",
-    "lastLogin": "18-02-2017"
+    "lastLogin": "18-02-2017",
+    "lastLoginGetTime": 1489791600000
   },
   {
     "id": 10,
@@ -87,6 +96,7 @@
     "surname": "Kasun",
     "gender": "Female",
     "email": "beautygar@test.com",
-    "lastLogin": "09-01-2017"
+    "lastLogin": "09-01-2017",
+    "lastLoginGetTime": 1486594800000
   }
 ]
