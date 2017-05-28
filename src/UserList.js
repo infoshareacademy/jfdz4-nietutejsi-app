@@ -5,6 +5,7 @@ import {
   MenuItem,
   FormGroup,
   FormControl,
+  Button
 } from 'react-bootstrap'
 class UserList extends React.Component {
 
@@ -46,6 +47,14 @@ class UserList extends React.Component {
             a.name !== b.name ? a.name < b.name ? -1 : 1 : 0
         ).reverse()
       })
+
+      this.handleSortReset = () => this.setState({
+        activeFilters: this.state.activeFilters = [],
+        sortOrder: this.state.sortOrder = null,
+        users: this.state.users.sort((a, b) =>
+          a.id - b.id
+        )
+      })
     }
     render() {
         return (
@@ -64,6 +73,10 @@ class UserList extends React.Component {
               </MenuItem>
               <MenuItem>Last login</MenuItem>
             </DropdownButton>
+            <Button
+              onClick={this.handleSortReset}>
+              Reset
+            </Button>
             <Table hover striped responsive>
                 <thead>
                 <tr>
