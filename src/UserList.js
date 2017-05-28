@@ -73,6 +73,7 @@ class UserList extends React.Component {
             <p style={{color: 'grey'}}>User list</p>
             <FormGroup>
               <FormControl
+                placeholder="Search for..."
                 onChange={this.handleSearchUpdate}
               />
             </FormGroup>
