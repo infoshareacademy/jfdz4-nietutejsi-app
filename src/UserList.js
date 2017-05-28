@@ -48,6 +48,16 @@ class UserList extends React.Component {
         ).reverse()
       })
 
+      this.handleLastLoginSort = () => this.setState({
+        activeFilters: this.state.activeFilters.includes('sortByLastLogin') ? this.state.activeFilters : this.state.activeFilters.concat('sortByLastLogin'),
+        sortOrder: this.state.sortOrder === (null || 'Descending') ? 'Ascending' : 'Descending',
+        users: this.state.sortOrder === 'Descending' || null ? this.state.users.sort((a, b) =>
+          a.lastLoginGetTime - b.lastLoginGetTime
+        ) : this.state.users.sort((a, b) =>
+        a.lastLoginGetTime - b.lastLoginGetTime
+        ).reverse()
+      })
+
       this.handleSortReset = () => this.setState({
         activeFilters: this.state.activeFilters = [],
         sortOrder: this.state.sortOrder = null,
@@ -71,7 +81,10 @@ class UserList extends React.Component {
                 onClick={this.handleFirstNameSort}>
                 First Name
               </MenuItem>
-              <MenuItem>Last login</MenuItem>
+              <MenuItem
+                onClick={this.handleLastLoginSort}>
+                Last login
+              </MenuItem>
             </DropdownButton>
             <Button
               onClick={this.handleSortReset}>
