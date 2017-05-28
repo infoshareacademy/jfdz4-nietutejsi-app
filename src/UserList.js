@@ -16,7 +16,7 @@ class UserList extends React.Component {
             sortButtonValue: 'Sort by ',
             activeFilters: [],
             searchValue: '',
-            sortOrder: 'Ascending'
+            sortOrder: null
         }
 
         fetch(
