@@ -5,6 +5,7 @@
     "name": "Jack",
     "surname": "Sparrow",
     "email": "jack.sparrow@test.com",
+    "gender":"Male",
     "lastLogin": "09-05-2017"
   },
   {
@@ -13,6 +14,7 @@
     "name": "Allison",
     "surname": "Jackson",
     "email": "allisonj@test.com",
+    "gender":"Male",
     "lastLogin": "14-05-2017"
   },
   {
@@ -21,6 +23,7 @@
     "name": "Brian",
     "surname": "Frytek",
     "email": "frytekiusz@test.com",
+    "gender":"Female",
     "lastLogin": "01-01-2017"
   }
 ]
