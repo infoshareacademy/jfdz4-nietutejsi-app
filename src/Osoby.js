@@ -10,7 +10,7 @@ class Osoby extends React.Component {
         }
 
         fetch(
-            process.env.PUBLIC_URL + 'data/user.json'
+            process.env.PUBLIC_URL + '/data/users.json'
         ).then(response => response.json()
         ).then(
             users => this.setState({
