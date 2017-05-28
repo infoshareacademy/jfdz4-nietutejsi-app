@@ -59,7 +59,7 @@ class UserList extends React.Component {
       })
 
       this.handleSortReset = () => this.setState({
-        activeFilters: this.state.activeFilters = ['search'],
+        activeFilters: this.state.searchValue !== '' ? this.state.activeFilters = ['search'] : [],
         sortOrder: this.state.sortOrder = null,
         users: this.state.users.sort((a, b) =>
           a.id - b.id
