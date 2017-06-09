@@ -1,16 +1,55 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {
+    Navbar,
+    Nav,
+    NavItem,
+    Col,
+    Grid,
+    Row,
+    Button } from 'react-bootstrap'
 
-import {Grid} from 'react-bootstrap'
+import {
+    BrowserRouter as Router,
+    Route } from 'react-router-dom'
+import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 import './App.css';
-import Panel from './Panel';
+import Osoby from './Osoby'
 
-class App extends React.Component {
+class App extends Component {
     render() {
         return (
-            <Grid>
-                <Panel/>
-            </Grid>
-        )
+            <Router>
+<div>
+                <Grid>
+                    <Row>
+                        <Col xs={6} md={4}>
+                            <img src={process.env.PUBLIC_URL + '/images/Avatar.png'} alt="Avatar"/>
+                            <Button>Edytuj profil</Button>
+                        </Col>
+                        <Col xs={12} md={8} x>
+                        </Col>
+                        <Col xs={12} md={8}>
+                            <Navbar>
+                                <Nav>
+                                    <IndexLinkContainer to="/">
+                                        <NavItem eventKey={1} href="#">Osoby</NavItem>
+                                    </IndexLinkContainer>
+                                    <LinkContainer to="/Życzenia">
+                                        <NavItem eventKey={2} href="#">Życzenia</NavItem>
+                                    </LinkContainer>
+                                </Nav>
+                            </Navbar>
+                        </Col>
+                    </Row>
+                </Grid>
+
+                <Route exact path="/" component={Osoby}/>
+    </div>
+            </Router>
+        );
     }
+
+
 }
 
+export default App;
