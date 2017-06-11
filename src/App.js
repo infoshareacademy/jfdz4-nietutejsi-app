@@ -11,7 +11,7 @@ import React, { Component } from 'react';
 
 
 //import logo from './logo.svg';
-//import './App.css';
+import './App.css';
 import LoginForm from './LoginForm'
 
 class App extends Component {

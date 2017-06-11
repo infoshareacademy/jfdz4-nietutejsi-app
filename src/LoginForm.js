@@ -1,7 +1,8 @@
 /**
  * Created by agnieszkaw on 14.05.17.
  */
-import React from 'react'
+import React from 'react';
+import './LoginForm.css';
 import {
     Col,
     FormGroup,
@@ -10,7 +11,7 @@ import {
     Form,
     Checkbox,
     Button
-} from 'react-bootstrap'
+} from 'react-bootstrap';
 
 class LoginForm extends React.Component {
 
@@ -30,16 +31,15 @@ class LoginForm extends React.Component {
 
         }
 
-
     }
 
     render() {
         return (
             <div>
                 <Col componentClass={ControlLabel} sm={6} smOffset={4}>
-                    <h3>zaloguj się</h3>
+                    <p><h3><strong>zaloguj się</strong></h3></p>
                 <Form horizontal>
-                    {/*<FormGroup controlId="formHorizontalName">
+                    {/*komentarz <FormGroup controlId="formHorizontalName">
                         <Col componentClass={ControlLabel} sm={2}>
                             Imię
                         </Col>
@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
                        <Col sm={8}>
                            <FormControl value={this.state.userName} type="email" onChange={this.handleUserName}/>
                         </Col>
-                    </FormGroup>*/}
+                    </FormGroup>koniec komentarza*/}
                     <FormGroup controlId="formHorizontalLogin">
                         <Col componentClass={ControlLabel} sm={2}>
                             Użytkownik
