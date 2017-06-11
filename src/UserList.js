@@ -1,33 +1,45 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import {
   Table,
   FormGroup,
   FormControl,
   Button
 } from 'react-bootstrap'
-class UserList extends React.Component {
 
-    constructor(props){
-        super(props)
+export default connect (
+  state => ({
+    users: state.userList
+  }),
+  dispatch => ({
+    begin: () => dispatch({type: 'userList/FETCH__BEGIN'}),
+    success: data => dispatch({type: 'userList/FETCH__SUCCESS', data}),
+    failure: error => dispatch({type: 'userList/FETCH__FAILURE', error})
+  })
+)(class UserList extends React.Component {
 
-        this.state = {
-            users: [],
+        state = {
             activeFilters: [],
             searchValue: '',
             sortOrder: null
         }
 
-        fetch(
-          process.env.PUBLIC_URL + '/data/users.json'
-        ).then(
-          response => response.json()
-        ).then(
-          users => this.setState({
-              users: users
-          })
-        )
+        componentWillMount() {
+          this.props.begin()
+          fetch(
+            `${process.env.PUBLIC_URL}/data/users.json`
+          ).then(
+            response => response.json().then(
+              data => this.props.success(data)
+            ).catch(
+              error => this.props.failure('Malformed JSON.')
+            )
+          ).catch(
+            error => this.props.failure('Connection error.')
+          )
+        }
 
-      this.handleSearchUpdate = event => this.setState ({
+      handleSearchUpdate = event => this.setState ({
         searchValue: event.target.value
       }, () => this.setState({
         activeFilters: this.state.activeFilters.filter(
@@ -35,7 +47,7 @@ class UserList extends React.Component {
         ).concat(this.state.searchValue === '' ? [] : 'search')
       }))
 
-      this.handleLastLoginSort = () => this.setState({
+      handleLastLoginSort = () => this.setState({
         activeFilters: this.state.activeFilters.includes('sortByLastLogin') ? this.state.activeFilters : this.state.activeFilters.concat('sortByLastLogin'),
         sortOrder: this.state.sortOrder === (null || 'Descending') ? 'Ascending' : 'Descending',
         users: this.state.sortOrder === 'Descending' || null ? this.state.users.sort((a, b) =>
@@ -45,14 +57,13 @@ class UserList extends React.Component {
         ).reverse()
       })
 
-      this.handleSortReset = () => this.setState({
+      handleSortReset = () => this.setState({
         activeFilters: this.state.searchValue !== '' ? this.state.activeFilters = ['search'] : [],
         sortOrder: this.state.sortOrder = null,
         users: this.state.users.sort((a, b) =>
           a.id - b.id
         )
       })
-    }
 
     render() {
       const sortingMarks = {
@@ -95,7 +106,7 @@ class UserList extends React.Component {
                 </thead>
                 <tbody>
                 {
-                  this.state.users.filter(
+                  this.props.users.data === null ? null : this.props.users.data.filter(
                       user => (
                           this.state.searchValue === '' ? true : [
                               user.name,
@@ -141,5 +152,4 @@ class UserList extends React.Component {
         )
     }
 }
-
-export default UserList;
+)
