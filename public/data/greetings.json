@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "eventType": "Urodziny",
+    "content": "Niech ten radosny, wspaniały dzień, na zawsze Twe troski, odsunie w cień. I niech się śmieje do Ciebie świat, blaskiem szczęśliwych i długich lat."
+  },
+  {
+    "id": 2,
+    "eventType": "Urodziny",
+    "content": "Z okazji urodzin przyjmij z głębi serca płynące życzenia samych pogodnych, szczęśliwych dni, pełnych ciepła, radości i spełnionych marzeń…"
+  },
+  {
+    "id": 3,
+    "eventType": "Urodziny",
+    "content": "Wszystko, co piękne i wymarzone, niech w Twym życiu będzie spełnione. Niech życie słodko płynie, a wszystko, co złe, niech szybko minie."
+  },
+  {
+    "id": 4,
+    "eventType": "Imieniny",
+    "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu."
+  },
+  {
+    "id": 5,
+    "eventType": "Imieniny",
+    "content": "W dniu Twych imienin, moja kochana, życzę Ci pięknych chwil już od rana, lekkich wieczorów i gorących nocy, niech nigdy blasku nie tracą Twe oczy!"
+  },
+  {
+    "id": 6,
+    "eventType": "Imieniny",
+    "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu."
+  },
+  {
+    "id": 7,
+    "eventType": "Boże Narodzenie",
+    "content": "Serdecznych świąt otulonych śniegiem i ciepłem rodzinnym oraz wiele szczęścia w Nowym Roku."
+  },
+  {
+    "id": 8,
+    "eventType": "Boże Narodzenie",
+    "content": "Pada śnieg, suną sanki, jest renifer i bałwanki. Śnieżki z nieba spadają, życzenia zdrowych świąt składają. Niech te święta będą wyjątkowe, a prezenty odlotowe."
+  },
+  {
+    "id": 9,
+    "eventType": "Boże Narodzenie",
+    "content": "Zielone gałązki, a na każdej świeczka, W stroiku z bibułek stoi choineczka Gdy zaświeci gwiazdka między gałązkami, Wesołą kolędę dla niej zaśpiewamy."
+  },
+  {
+    "id": 10,
+    "eventType": "Wielkanoc",
+    "content": "Niech Zmartwychwstały Pan będzie obecny w naszych domach, niech opromienia nas blaskiem swej miłości i przemienia to, co szare, w kwitnący ogród… Najserdeczniejsze życzenia wielkanocne składa…"
+  },
+  {
+    "id": 11,
+    "eventType": "Wielkanoc",
+    "content": "Niech zajączek szczodry będzie i z jajeczkiem do Was przybędzie, niech święconka smaczna będzie, a w dyngusa woda wszędzie."
+  },
+  {
+    "id": 12,
+    "eventType": "Wielkanoc",
+    "content": "Serdeczne życzenia radości i siły płynącej z istoty Świąt Wielkanocnych, by uśmiech i wiosenny optymizm towarzyszyły Wam każdego dnia."
+  },
+]
