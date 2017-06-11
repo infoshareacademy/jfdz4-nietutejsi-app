@@ -14,6 +14,7 @@ import {
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 import './App.css';
 import Osoby from './Osoby'
+import Modal from './Modal'
 
 class App extends Component {
     render() {
@@ -25,6 +26,7 @@ class App extends Component {
                         <Col xs={6} md={4}>
                             <img src={process.env.PUBLIC_URL + '/images/Avatar.png'} alt="Avatar"/>
                             <Button>Edytuj profil</Button>
+                            <Button>Dodaj nową osobę</Button>
                         </Col>
                         <Col xs={12} md={8} x>
                         </Col>
