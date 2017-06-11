@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
                         <Col componentClass={ControlLabel} sm={2}>
                             Imię
                         </Col>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <FormControl
                                 value={this.state.userName}
                                 type="email"
@@ -54,7 +54,7 @@ class LoginForm extends React.Component {
                         <Col componentClass={ControlLabel} sm={2}>
                             Nazwisko
                         </Col>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <FormControl
                                 value={this.state.userName}
                                 type="email"
@@ -67,7 +67,7 @@ class LoginForm extends React.Component {
                         <Col componentClass={ControlLabel} sm={2}>
                             Nazwa użytkownika
                         </Col>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <FormControl
                                 value={this.state.userName}
                                 type="email"
@@ -81,7 +81,7 @@ class LoginForm extends React.Component {
                         <Col componentClass={ControlLabel} sm={2}>
                             E-mail
                         </Col>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <FormControl
                                 value={this.state.userName}
                                 type="email"
@@ -95,7 +95,7 @@ class LoginForm extends React.Component {
                         <Col componentClass={ControlLabel} sm={2}>
                             Hasło
                         </Col>
-                        <Col sm={10}>
+                        <Col sm={6}>
                             <FormControl type="Haslo" placeholder="Haslo"/>
                         </Col>
                     </FormGroup>
