@@ -17,7 +17,10 @@ import LoginForm from './LoginForm'
 class App extends Component {
   render() {
     return (
-        <div><h3>zaloguj się</h3>
+        <div>
+            
+            
+            
         <LoginForm/>
 
         

@@ -36,38 +36,30 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
+                <Col componentClass={ControlLabel} sm={6} smOffset={4}>
+                    <h3>zaloguj się</h3>
                 <Form horizontal>
-                    <FormGroup controlId="formHorizontalName">
+                    {/*<FormGroup controlId="formHorizontalName">
                         <Col componentClass={ControlLabel} sm={2}>
                             Imię
                         </Col>
-                        <Col sm={6}>
-                            <FormControl
-                                value={this.state.userName}
-                                type="email"
-                                placeholder="Name"
-                                onChange={this.handleUserName}
-                            />
+                        <Col sm={8}>
+                            <FormControl value={this.state.userName} type="email"placeholder="Name onChange={this.handleUserName} />
                         </Col>
                     </FormGroup>
-                    <FormGroup controlId="formHorizontalSurname">
+                     FormGroup controlId="formHorizontalSurname">
                         <Col componentClass={ControlLabel} sm={2}>
                             Nazwisko
                         </Col>
-                        <Col sm={6}>
-                            <FormControl
-                                value={this.state.userName}
-                                type="email"
-                                placeholder="Surname"
-                                onChange={this.handleUserName}
-                            />
+                       <Col sm={8}>
+                           <FormControl value={this.state.userName} type="email" onChange={this.handleUserName}/>
                         </Col>
-                    </FormGroup>
+                    </FormGroup>*/}
                     <FormGroup controlId="formHorizontalLogin">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Nazwa użytkownika
+                            Użytkownik
                         </Col>
-                        <Col sm={6}>
+                        <Col sm={8}>
                             <FormControl
                                 value={this.state.userName}
                                 type="email"
@@ -77,11 +69,11 @@ class LoginForm extends React.Component {
                         </Col>
                     </FormGroup>
 
-                    <FormGroup controlId="formHorizontalEmail">
+                    {/*<FormGroup controlId="formHorizontalEmail">
                         <Col componentClass={ControlLabel} sm={2}>
                             E-mail
                         </Col>
-                        <Col sm={6}>
+                        <Col sm={10}>
                             <FormControl
                                 value={this.state.userName}
                                 type="email"
@@ -89,14 +81,14 @@ class LoginForm extends React.Component {
                                 onChange={this.handleUserName}
                             />
                         </Col>
-                    </FormGroup>
+                    </FormGroup>*/}
 
                     <FormGroup controlId="formHorizontalPassword">
                         <Col componentClass={ControlLabel} sm={2}>
                             Hasło
                         </Col>
-                        <Col sm={6}>
-                            <FormControl type="Haslo" placeholder="Haslo"/>
+                        <Col sm={8}>
+                            <FormControl type="Password" placeholder="Password"/>
                         </Col>
                     </FormGroup>
 
@@ -114,6 +106,7 @@ class LoginForm extends React.Component {
                         </Col>
                     </FormGroup>
                 </Form>
+                    </Col>
             </div>
 
         )
