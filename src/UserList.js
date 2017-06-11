@@ -9,19 +9,21 @@ import {
 
 export default connect (
   state => ({
-    users: state.userList
+    users: state.userList,
+    userListSorting: state.userListSorting
   }),
   dispatch => ({
     begin: () => dispatch({type: 'userList/FETCH__BEGIN'}),
     success: data => dispatch({type: 'userList/FETCH__SUCCESS', data}),
-    failure: error => dispatch({type: 'userList/FETCH__FAILURE', error})
+    failure: error => dispatch({type: 'userList/FETCH__FAILURE', error}),
+    sortLastLogin: order => dispatch({ type: 'userListSorting/LAST_LOGIN', order}),
+    sortReset: () => dispatch({type: 'userListSorting/RESET'})
   })
 )(class UserList extends React.Component {
 
         state = {
             activeFilters: [],
-            searchValue: '',
-            sortOrder: null
+            searchValue: ''
         }
 
         componentWillMount() {
@@ -47,28 +49,29 @@ export default connect (
         ).concat(this.state.searchValue === '' ? [] : 'search')
       }))
 
-      handleLastLoginSort = () => this.setState({
-        activeFilters: this.state.activeFilters.includes('sortByLastLogin') ? this.state.activeFilters : this.state.activeFilters.concat('sortByLastLogin'),
-        sortOrder: this.state.sortOrder === (null || 'Descending') ? 'Ascending' : 'Descending',
-        users: this.state.sortOrder === 'Descending' || null ? this.state.users.sort((a, b) =>
-          a.lastLoginGetTime - b.lastLoginGetTime
-        ) : this.state.users.sort((a, b) =>
-        a.lastLoginGetTime - b.lastLoginGetTime
-        ).reverse()
-      })
-
-      handleSortReset = () => this.setState({
-        activeFilters: this.state.searchValue !== '' ? this.state.activeFilters = ['search'] : [],
-        sortOrder: this.state.sortOrder = null,
-        users: this.state.users.sort((a, b) =>
-          a.id - b.id
-        )
-      })
-
     render() {
+      const { data, fetching, error } = this.props.users
+      const { sortOrder } = this.props.userListSorting
       const sortingMarks = {
         'Descending': <span>&#8595;</span>,
         'Ascending': <span>&#8593;</span>
+      }
+
+      let sortedData = data
+
+      if (sortOrder !== null) {
+        sortedData = data.sort(
+          (a, b) => {
+            if (sortOrder === 'ASC') {
+              return b.lastLoginGetTime - a.lastLoginGetTime
+            }
+            if (sortOrder === 'DSC') {
+              return a.lastLoginGetTime - b.lastLoginGetTime
+            }
+
+            return 0
+          }
+        )
       }
 
       const sortingMark = sortingMarks[this.state.sortOrder] || null
@@ -84,12 +87,18 @@ export default connect (
               />
             </FormGroup>
             <Button
-                onClick={this.handleLastLoginSort}>
+                onClick={
+                () => this.props.sortLastLogin(
+                [null, 'DSC'].includes(sortOrder) ? 'ASC' : 'DSC'
+                )}
+            >
                 Sort by last login
               {sortingMark}
             </Button>
             <Button
-              onClick={this.handleSortReset}>
+              onClick={
+              () => this.props.sortReset()
+              }>
               Reset sort
             </Button>
             <Table hover striped responsive>
@@ -106,7 +115,7 @@ export default connect (
                 </thead>
                 <tbody>
                 {
-                  this.props.users.data === null ? null : this.props.users.data.filter(
+                  this.props.users.data === null ? null : sortedData.filter(
                       user => (
                           this.state.searchValue === '' ? true : [
                               user.name,
