@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Table,
-  DropdownButton,
-  MenuItem,
   FormGroup,
   FormControl,
   Button
@@ -14,7 +12,6 @@ class UserList extends React.Component {
 
         this.state = {
             users: [],
-            sortButtonValue: 'Sort by ',
             activeFilters: [],
             searchValue: '',
             sortOrder: null
@@ -37,16 +34,6 @@ class UserList extends React.Component {
             phrase => phrase !== 'search'
         ).concat(this.state.searchValue === '' ? [] : 'search')
       }))
-
-      this.handleFirstNameSort = () => this.setState({
-        activeFilters: this.state.activeFilters.includes('sortByName') ? this.state.activeFilters : this.state.activeFilters.concat('sortByName'),
-        sortOrder: this.state.sortOrder === (null || 'Descending') ? 'Ascending' : 'Descending',
-        users: this.state.sortOrder === 'Descending' || null ? this.state.users.sort((a, b) =>
-            a.name !== b.name ? a.name < b.name ? -1 : 1 : 0
-        ) : this.state.users.sort((a, b) =>
-            a.name !== b.name ? a.name < b.name ? -1 : 1 : 0
-        ).reverse()
-      })
 
       this.handleLastLoginSort = () => this.setState({
         activeFilters: this.state.activeFilters.includes('sortByLastLogin') ? this.state.activeFilters : this.state.activeFilters.concat('sortByLastLogin'),
@@ -77,16 +64,10 @@ class UserList extends React.Component {
                 onChange={this.handleSearchUpdate}
               />
             </FormGroup>
-            <DropdownButton title={this.state.sortButtonValue}>
-              <MenuItem
-                onClick={this.handleFirstNameSort}>
-                First Name
-              </MenuItem>
-              <MenuItem
+            <Button
                 onClick={this.handleLastLoginSort}>
-                Last login
-              </MenuItem>
-            </DropdownButton>
+                Sort by last login
+            </Button>
             <Button
               onClick={this.handleSortReset}>
               Reset sort
