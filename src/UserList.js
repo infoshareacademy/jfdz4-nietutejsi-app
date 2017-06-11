@@ -53,7 +53,15 @@ class UserList extends React.Component {
         )
       })
     }
+
     render() {
+      const sortingMarks = {
+        'Descending': <span>&#8595;</span>,
+        'Ascending': <span>&#8593;</span>
+      }
+
+      const sortingMark = sortingMarks[this.state.sortOrder] || null
+
         return (
           <div>
             <hr/>
@@ -67,6 +75,7 @@ class UserList extends React.Component {
             <Button
                 onClick={this.handleLastLoginSort}>
                 Sort by last login
+              {sortingMark}
             </Button>
             <Button
               onClick={this.handleSortReset}>
