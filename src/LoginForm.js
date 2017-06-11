@@ -38,7 +38,8 @@ class LoginForm extends React.Component {
             <div>
                 <Col componentClass={ControlLabel} sm={6} smOffset={4}>
                     <p><h3><strong>zaloguj się</strong></h3></p>
-                <Form horizontal>
+                <Form horizontal onSubmit={this.handleSubmit}>
+
                     {/*komentarz <FormGroup controlId="formHorizontalName">
                         <Col componentClass={ControlLabel} sm={2}>
                             Imię
@@ -100,8 +101,9 @@ class LoginForm extends React.Component {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
+                            <input type="submit" value="Zaloguj się" />
                             <Button type="submit">
-                                Zaloguj
+                            Zaloguj
                             </Button>
                         </Col>
                     </FormGroup>
