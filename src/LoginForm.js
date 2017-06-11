@@ -29,7 +29,7 @@ class LoginForm extends React.Component {
             })
 
         }
-        
+
 
     }
 
@@ -37,6 +37,46 @@ class LoginForm extends React.Component {
         return (
             <div>
                 <Form horizontal>
+                    <FormGroup controlId="formHorizontalName">
+                        <Col componentClass={ControlLabel} sm={2}>
+                            Name
+                        </Col>
+                        <Col sm={10}>
+                            <FormControl
+                                value={this.state.userName}
+                                type="email"
+                                placeholder="Name"
+                                onChange={this.handleUserName}
+                            />
+                        </Col>
+                    </FormGroup>
+                    <FormGroup controlId="formHorizontalSurname">
+                        <Col componentClass={ControlLabel} sm={2}>
+                            Surname
+                        </Col>
+                        <Col sm={10}>
+                            <FormControl
+                                value={this.state.userName}
+                                type="email"
+                                placeholder="Surname"
+                                onChange={this.handleUserName}
+                            />
+                        </Col>
+                    </FormGroup>
+                    <FormGroup controlId="formHorizontalLogin">
+                        <Col componentClass={ControlLabel} sm={2}>
+                            Login
+                        </Col>
+                        <Col sm={10}>
+                            <FormControl
+                                value={this.state.userName}
+                                type="email"
+                                placeholder="Login"
+                                onChange={this.handleUserName}
+                            />
+                        </Col>
+                    </FormGroup>
+
                     <FormGroup controlId="formHorizontalEmail">
                         <Col componentClass={ControlLabel} sm={2}>
                             Email
