@@ -6,7 +6,7 @@ import {
     Col,
     Grid,
     Row,
-    Button } from 'react-bootstrap'
+     } from 'react-bootstrap'
 
 import {
     BrowserRouter as Router,
@@ -14,7 +14,8 @@ import {
 import { IndexLinkContainer, LinkContainer } from 'react-router-bootstrap'
 import './App.css';
 import Osoby from './Osoby'
-import Modal from './Modal'
+import NewPerson from './NewPerson'
+
 
 class App extends Component {
     render() {
@@ -25,8 +26,7 @@ class App extends Component {
                     <Row>
                         <Col xs={6} md={4}>
                             <img src={process.env.PUBLIC_URL + '/images/Avatar.png'} alt="Avatar"/>
-                            <Button>Edytuj profil</Button>
-                            <Button>Dodaj nową osobę</Button>
+
                         </Col>
                         <Col xs={12} md={8} x>
                         </Col>
@@ -36,6 +36,10 @@ class App extends Component {
                                     <IndexLinkContainer to="/">
                                         <NavItem eventKey={1} href="#">Osoby</NavItem>
                                     </IndexLinkContainer>
+                                    <LinkContainer to="/NowaOsoba">
+
+                                        <NavItem eventKey={2} href="#">Dodaj nową osobę</NavItem>
+                                    </LinkContainer>
                                     <LinkContainer to="/Życzenia">
                                         <NavItem eventKey={2} href="#">Życzenia</NavItem>
                                     </LinkContainer>
@@ -46,6 +50,7 @@ class App extends Component {
                 </Grid>
 
                 <Route exact path="/" component={Osoby}/>
+                <Route path="/NowaOsoba" component={NewPerson}/>
     </div>
             </Router>
         );
