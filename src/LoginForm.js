@@ -39,7 +39,7 @@ class LoginForm extends React.Component {
                 <Form horizontal>
                     <FormGroup controlId="formHorizontalName">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Name
+                            Imię
                         </Col>
                         <Col sm={10}>
                             <FormControl
@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
                     </FormGroup>
                     <FormGroup controlId="formHorizontalSurname">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Surname
+                            Nazwisko
                         </Col>
                         <Col sm={10}>
                             <FormControl
@@ -65,7 +65,7 @@ class LoginForm extends React.Component {
                     </FormGroup>
                     <FormGroup controlId="formHorizontalLogin">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Login
+                            Nazwa użytkownika
                         </Col>
                         <Col sm={10}>
                             <FormControl
@@ -79,7 +79,7 @@ class LoginForm extends React.Component {
 
                     <FormGroup controlId="formHorizontalEmail">
                         <Col componentClass={ControlLabel} sm={2}>
-                            Email
+                            E-mail
                         </Col>
                         <Col sm={10}>
                             <FormControl
