@@ -1,5 +1,6 @@
 import React from 'react'
 import {Table} from 'react-bootstrap'
+import Modal from './Modal'
 
 class Osoby extends React.Component {
     constructor(props) {
@@ -34,10 +35,11 @@ class Osoby extends React.Component {
                 {this.state.users.map(
                     user => (
                         <tr key={user.id}>
-                            <td>{user.name}</td>
+                            <td >{user.name}</td>
                             <td>{user.surname}</td>
                             <td>{user.email}</td>
                             <td>{user.gender}</td>
+                            <td><Modal /></td>
                         </tr>
                     )
                 )
