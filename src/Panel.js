@@ -7,18 +7,20 @@ import DropButton from "./DropdownButton";
 
 class Panel extends React.Component{
 
+
+
+handleSavePanel = {}
+
+
     render(){
         return (
             <div>
                 <Form inline>
-                    <DropButton/>
+                        <DropButton />
                     <Picker/>
-                    <Button>Wybierz urodziny</Button>
-
-
-
+                    <Button>Wybierz życzenia</Button>
+                    <Button bsStyle="success" onClick={this.handleSavePanel}>+</Button>
                 </Form>
-
             </div>
         )
     }

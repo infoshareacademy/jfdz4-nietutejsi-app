@@ -6,24 +6,52 @@ import {Form, FormGroup, ControlLabel, FormControl, Button} from 'react-bootstra
 import Panel from './Panel'
 
 export default class NewPerson extends React.Component {
+
+    constructor(props){
+        super(props)
+
+        this.state ={
+            name:[],
+            nameValue:'',
+            surname:[],
+            surnameValue:'',
+            email:[],
+            emailValue:''
+        }
+    }
   render() {
       return (
 <div>
     <Form inline>
         <FormGroup controlId="formInlineName">
-            <ControlLabel>Imię</ControlLabel>
+            <ControlLabel onChange={event =>{
+                event.preventDefault()
+                this.setState({
+                    name:this.state.name.concat(this.state.nameValue)
+                })
+            }}>Imię</ControlLabel>
             {' '}
             <FormControl type="text" placeholder="Jan" />
         </FormGroup>
         {' '}
         <FormGroup controlId="formInlineEmail">
-            <ControlLabel>Nazwisko</ControlLabel>
+            <ControlLabel onChange={event =>{
+                event.preventDefault()
+                this.setState({
+                    surname:this.state.surname.concat(this.state.surnameValue)
+                })
+            }}>Nazwisko</ControlLabel>
             {' '}
             <FormControl type="text" placeholder="Kowalski" />
         </FormGroup>
         {' '}
         <FormGroup controlId="formInlineEmail">
-            <ControlLabel>Email</ControlLabel>
+            <ControlLabel onChange={event =>{
+                event.preventDefault()
+                this.setState({
+                    email:this.state.email.concat(this.state.emailValue)
+                })
+            }}>Email</ControlLabel>
             {' '}
             <FormControl type="email" placeholder="jan.kowalski@example.com" />
         </FormGroup>
