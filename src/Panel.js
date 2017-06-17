@@ -7,9 +7,10 @@ import DropButton from "./DropdownButton";
 
 class Panel extends React.Component{
 
+state ={
+    add: null
+}
 
-
-handleSavePanel = {}
 
 
     render(){
@@ -18,8 +19,11 @@ handleSavePanel = {}
                 <Form inline>
                         <DropButton />
                     <Picker/>
-                    <Button>Wybierz życzenia</Button>
-                    <Button bsStyle="success" onClick={this.handleSavePanel}>+</Button>
+                    <Button >Wybierz życzenia</Button>
+                    <Button bsStyle="success" onClick={event=> {
+                        event.preventDefault()
+                        this.setState({add:"newPanel"})
+                    }}>+</Button>
                 </Form>
             </div>
         )
