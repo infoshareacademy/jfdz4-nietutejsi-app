@@ -21,6 +21,7 @@ class Osoby extends React.Component {
     }
 
     render() {
+
         return (
             <Table striped bordered condensed hover>
                 <thead>
