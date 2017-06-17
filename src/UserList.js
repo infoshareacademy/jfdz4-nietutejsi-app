@@ -49,15 +49,15 @@ export default connect (
         ).concat(this.state.searchValue === '' ? [] : 'search')
       }))
 
-    render() {
-      const { data, fetching, error } = this.props.users
-      const { sortOrder } = this.props.userListSorting
-      const sortingMarks = {
-        'Descending': <span>&#8595;</span>,
-        'Ascending': <span>&#8593;</span>
-      }
+      render() {
+        const {data, fetching, error} = this.props.users
+        const {sortOrder} = this.props.userListSorting
+        const sortingMarks = {
+          'DSC': <span>&#8595;</span>,
+          'ASC': <span>&#8593;</span>
+        }
+        const sortingMark = sortingMarks[this.props.userListSorting.sortOrder] || null
 
-      const sortingMark = sortingMarks[this.props.userListSorting.sortOrder] || null
 
       let sortedData = data
 
