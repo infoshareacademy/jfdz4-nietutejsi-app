@@ -57,6 +57,8 @@ export default connect (
         'Ascending': <span>&#8593;</span>
       }
 
+      const sortingMark = sortingMarks[this.props.userListSorting.sortOrder] || null
+
       let sortedData = data
 
       if (sortOrder !== null) {
@@ -68,13 +70,20 @@ export default connect (
             if (sortOrder === 'DSC') {
               return a.lastLoginGetTime - b.lastLoginGetTime
             }
-
-            return 0
           }
         )
       }
 
-      const sortingMark = sortingMarks[this.state.sortOrder] || null
+      if (this.props.users.data === null) {
+        return null
+      } else if (
+          (sortOrder === null)) {
+          sortedData = data.sort(
+              (a, b) => {
+                return a.id - b.id
+              }
+          )
+        }
 
         return (
           <div>
