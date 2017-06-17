@@ -110,6 +110,12 @@ export default connect (
               }>
               Reset sort
             </Button>
+            {
+              this.props.users.fetching === true ? <p>Fetching data</p> : null
+            }
+            {
+              this.props.users.error !== null ? <p>{this.props.users.error}</p> : null
+            }
             <Table hover striped responsive>
                 <thead>
                 <tr>
