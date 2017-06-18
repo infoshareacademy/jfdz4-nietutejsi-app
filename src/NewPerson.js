@@ -3,8 +3,9 @@
  */
 import React from 'react'
 import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem} from 'react-bootstrap'
-import Picker from './DataPicker'
 import moment from 'moment';
+import DatePicker from 'react-datepicker';
+
 
 export default class NewPerson extends React.Component {
 
@@ -34,7 +35,7 @@ export default class NewPerson extends React.Component {
 
     handleNewUserCreation = event => {
         event.preventDefault()
-        fetch('http://localhost:3010/users', {
+        fetch('https://secret-ocean-59384.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
