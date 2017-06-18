@@ -21,26 +21,28 @@ const noDecoration = {
   textDecoration: 'none'
 }
 
-const App = () => (
-  <div>
-    <BrowserRouter>
-    <Navbar>
-        <Nav>
-          <img style={logoStyle} src={process.env.PUBLIC_URL + '/images/wishbook-logo.png'} alt=""/>
-        </Nav>
-        <Nav>
-            <NavItem>
-              <Link style={noDecoration} to="/wishes">Życzenia</Link>
-            </NavItem>
-        </Nav>
-        <Nav pullRight>
-            <NavItem>
-              <Link style={noDecoration} to ="/profile">Mój profil</Link>
-            </NavItem>
-        </Nav>
-    </Navbar>
-      </BrowserRouter>
-    </div>
-)
-
-export default App;
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <Navbar>
+            <Nav>
+              <img style={logoStyle} src={process.env.PUBLIC_URL + '/images/wishbook-logo.png'} alt=""/>
+            </Nav>
+            <Nav>
+              <NavItem>
+                <Link style={noDecoration} to="/wishes">Życzenia</Link>
+              </NavItem>
+            </Nav>
+            <Nav pullRight>
+              <NavItem>
+                <Link style={noDecoration} to ="/profile">Mój profil</Link>
+              </NavItem>
+            </Nav>
+          </Navbar>
+        </BrowserRouter>
+      </div>
+    )
+  }
+}
