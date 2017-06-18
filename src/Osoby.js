@@ -11,7 +11,7 @@ class Osoby extends React.Component {
         }
 
         fetch(
-            'http://localhost:3010/users'
+            'https://secret-ocean-59384.herokuapp.com/users'
         ).then(response => response.json()
         ).then(
             users => this.setState({
