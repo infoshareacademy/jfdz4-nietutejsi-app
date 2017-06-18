@@ -2,66 +2,98 @@
  * Created by rafalpaluch on 11.06.17.
  */
 import React from 'react'
-import {Form, FormGroup, ControlLabel, FormControl, Button} from 'react-bootstrap'
-import Panel from './Panel'
+import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem} from 'react-bootstrap'
+import Picker from './DataPicker'
 
 export default class NewPerson extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
 
-        this.state ={
-            name:[],
-            nameValue:'',
-            surname:[],
-            surnameValue:'',
-            email:[],
-            emailValue:''
+        this.state = {
+            btnTitle:'Wybierz okazje',
+            add: null,
+            nameValue: '',
+            surname: [],
+            surnameValue: '',
+            email: [],
+            emailValue: ''
         }
+
+        this.handleInputChangeName = event => this.setState({
+            nameValue: event.target.value
+        })
+        this.handleInputChangeSurname = event => this.setState({
+            nameValue: event.target.value
+        })
+        this.handleInputChangeEmail = event => this.setState({
+            nameValue: event.target.value
+        })
     }
-  render() {
-      return (
-<div>
-    <Form inline>
-        <FormGroup controlId="formInlineName">
-            <ControlLabel onChange={event =>{
-                event.preventDefault()
-                this.setState({
-                    name:this.state.name.concat(this.state.nameValue)
-                })
-            }}>Imię</ControlLabel>
-            {' '}
-            <FormControl type="text" placeholder="Jan" />
-        </FormGroup>
-        {' '}
-        <FormGroup controlId="formInlineEmail">
-            <ControlLabel onChange={event =>{
-                event.preventDefault()
-                this.setState({
-                    surname:this.state.surname.concat(this.state.surnameValue)
-                })
-            }}>Nazwisko</ControlLabel>
-            {' '}
-            <FormControl type="text" placeholder="Kowalski" />
-        </FormGroup>
-        {' '}
-        <FormGroup controlId="formInlineEmail">
-            <ControlLabel onChange={event =>{
-                event.preventDefault()
-                this.setState({
-                    email:this.state.email.concat(this.state.emailValue)
-                })
-            }}>Email</ControlLabel>
-            {' '}
-            <FormControl type="email" placeholder="jan.kowalski@example.com" />
-        </FormGroup>
-        {' '}
 
-    </Form>
-    <Panel/>
-</div>
-)
+    handleNewUserCreation = event => {
+        event.preventDefault()
+        fetch('http://localhost:3010/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "username": "jckspr87",
+                "name": "Jack",
+                "surname": "Sparrow",
+                "email": "jack.sparrow@test.com",
+                "gender": "Male",
+                "lastLogin": "09-05-2017"
+            })
+        })
+    }
 
-}
+    handleChange =(evt) => {
+        this.setState({btnTitle: evt})
+    }
+
+
+    render() {
+        console.log(this.state)
+        return (
+            <div>
+                <Form inline onSubmit={this.handleNewUserCreation}>
+                    <FormGroup controlId="formInlineName">
+                        <ControlLabel>Imię</ControlLabel>
+                        {' '}
+                        <FormControl type="text" placeholder="Jan" onChange={this.handleInputChangeName}/>
+                    </FormGroup>
+                    {' '}
+                    <FormGroup controlId="formInlineEmail">
+                        <ControlLabel>Nazwisko</ControlLabel>
+                        {' '}
+                        <FormControl type="text" placeholder="Kowalski" onChange={this.handleInputChangeSurname}/>
+                    </FormGroup>
+                    {' '}
+                    <FormGroup controlId="formInlineEmail">
+                        <ControlLabel>Email</ControlLabel>
+                        {' '}
+                        <FormControl type="email" placeholder="jan.kowalski@example.com" onChange={this.handleInputChangeEmail}/>
+                    </FormGroup>
+                    {' '}
+
+                    <FormGroup>
+                        <div>
+                            <DropdownButton title={this.state.btnTitle} id="bg-vertical-dropdown-1"
+                                            onSelect={this.handleChange}>
+                                <MenuItem eventKey="Urodziny">Urodziny</MenuItem>
+                                <MenuItem eventKey="Imieniny">Imieniny</MenuItem>
+                            </DropdownButton>
+                        </div>
+                        <Picker/>
+                        {/*<Button >Wybierz życzenia</Button>*/}
+                        <Button bsStyle="success" type="submit">+</Button>
+                    </FormGroup>
+                </Form>
+            </div>
+        )
+
+    }
 }
 

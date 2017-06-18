@@ -1,29 +1,49 @@
-[
-  {
-    "id": 1,
-    "username": "jckspr87",
-    "name": "Jack",
-    "surname": "Sparrow",
-    "email": "jack.sparrow@test.com",
-    "gender":"Male",
-    "lastLogin": "09-05-2017"
-  },
-  {
-    "id": 2,
-    "username": "allison97",
-    "name": "Allison",
-    "surname": "Jackson",
-    "email": "allisonj@test.com",
-    "gender":"Male",
-    "lastLogin": "14-05-2017"
-  },
-  {
-    "id": 3,
-    "username": "frytekiuszxx",
-    "name": "Brian",
-    "surname": "Frytek",
-    "email": "frytekiusz@test.com",
-    "gender":"Female",
-    "lastLogin": "01-01-2017"
-  }
-]
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "jckspr87",
+      "name": "Jack",
+      "surname": "Sparrow",
+      "email": "jack.sparrow@test.com",
+      "gender": "Male",
+      "lastLogin": "09-05-2017"
+    },
+    {
+      "id": 2,
+      "username": "allison97",
+      "name": "Allison",
+      "surname": "Jackson",
+      "email": "allisonj@test.com",
+      "gender": "Male",
+      "lastLogin": "14-05-2017"
+    },
+    {
+      "id": 3,
+      "username": "frytekiuszxx",
+      "name": "Brian",
+      "surname": "Frytek",
+      "email": "frytekiusz@test.com",
+      "gender": "Female",
+      "lastLogin": "01-01-2017"
+    },
+    {
+      "username": "jckspr87",
+      "name": "Jack",
+      "surname": "Sparrow",
+      "email": "jack.sparrow@test.com",
+      "gender": "Male",
+      "lastLogin": "09-05-2017",
+      "id": 4
+    },
+    {
+      "username": "jckspr87",
+      "name": "Jack",
+      "surname": "Sparrow",
+      "email": "jack.sparrow@test.com",
+      "gender": "Male",
+      "lastLogin": "09-05-2017",
+      "id": 5
+    }
+  ]
+}
