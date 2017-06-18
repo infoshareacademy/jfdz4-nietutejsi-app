@@ -44,6 +44,24 @@
       "gender": "Male",
       "lastLogin": "09-05-2017",
       "id": 5
+    },
+    {
+      "username": "jckspr87",
+      "name": "Jack",
+      "surname": "Sparrow",
+      "email": "jack.sparrow@test.com",
+      "gender": "Male",
+      "lastLogin": "09-05-2017",
+      "id": 6
+    },
+    {
+      "username": "jckspr87",
+      "name": "Jack",
+      "surname": "Sparrow",
+      "email": "jack.sparrow@test.com",
+      "gender": "Male",
+      "lastLogin": "09-05-2017",
+      "id": 7
     }
   ]
 }

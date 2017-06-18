@@ -4,6 +4,7 @@
 import React from 'react'
 import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem} from 'react-bootstrap'
 import Picker from './DataPicker'
+import moment from 'moment';
 
 export default class NewPerson extends React.Component {
 
@@ -16,7 +17,7 @@ export default class NewPerson extends React.Component {
             nameValue: '',
 
             surnameValue: '',
-
+            startDate: moment(),
             emailValue: ''
         }
 
@@ -53,6 +54,12 @@ export default class NewPerson extends React.Component {
         this.setState({btnTitle: evt})
     }
 
+    handleDateChange = (date) => {
+        this.setState({
+            startDate: date
+        });
+    }
+
 
     render() {
         console.log(this.state)
@@ -86,7 +93,10 @@ export default class NewPerson extends React.Component {
                                 <MenuItem eventKey="Imieniny">Imieniny</MenuItem>
                             </DropdownButton>
                         </div>
-                        <Picker/>
+                        <DatePicker
+                            selected={this.state.startDate}
+                            onChange={this.handleDateChange}
+                        />
                         {/*<Button >Wybierz życzenia</Button>*/}
                         <Button bsStyle="success" type="submit">+</Button>
                     </FormGroup>
