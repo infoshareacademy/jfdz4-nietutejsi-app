@@ -17,6 +17,10 @@ const logoStyle = {
   transform: 'translateX(-25%)'
 }
 
+const noDecoration = {
+  textDecoration: 'none'
+}
+
 const App = () => (
   <div>
     <BrowserRouter>
@@ -26,12 +30,12 @@ const App = () => (
         </Nav>
         <Nav>
             <NavItem>
-              <Link to="/wishes">Życzenia</Link>
+              <Link style={noDecoration} to="/wishes">Życzenia</Link>
             </NavItem>
         </Nav>
         <Nav pullRight>
             <NavItem>
-              <Link to ="/profile">Mój profil</Link>
+              <Link style={noDecoration} to ="/profile">Mój profil</Link>
             </NavItem>
         </Nav>
     </Navbar>
