@@ -10,12 +10,19 @@ import {
 } from 'react-router-dom'
 import './App.css';
 
+const logoStyle = {
+  maxWidth: '50%',
+  left: '50%',
+  position: 'relative',
+  transform: 'translateX(-25%)'
+}
+
 const App = () => (
   <div>
     <BrowserRouter>
     <Navbar>
-        <Nav pullLeft>
-          <img src="http://lorempizza.com/100/50"/>
+        <Nav>
+          <img style={logoStyle} src={process.env.PUBLIC_URL + '/images/wishbook-logo.png'} alt=""/>
         </Nav>
         <Nav>
             <NavItem>
