@@ -14,9 +14,9 @@ export default class NewPerson extends React.Component {
             btnTitle:'Wybierz okazje',
             add: null,
             nameValue: '',
-            surname: [],
+
             surnameValue: '',
-            email: [],
+
             emailValue: ''
         }
 
