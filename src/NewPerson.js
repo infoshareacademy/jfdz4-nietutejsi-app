@@ -26,7 +26,7 @@ export default class NewPerson extends React.Component {
             nameValue: event.target.value
         })
         this.handleInputChangeSurname = event => this.setState({
-            nameValue: event.target.value
+            surnameValue: event.target.value
         })
         this.handleInputChangeEmail = event => this.setState({
             nameValue: event.target.value
@@ -41,12 +41,12 @@ export default class NewPerson extends React.Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "username": "jckspr87",
+                "username": this.state.nameValue,
                 "name": "Jack",
-                "surname": "Sparrow",
-                "email": "jack.sparrow@test.com",
+                "surnameValue": this.state.surnameValue,
+                "email": this.state.emailValue,
                 "gender": "Male",
-                "lastLogin": "09-05-2017"
+                "lastLogin": this.state.startDate
             })
         })
     }
