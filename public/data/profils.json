@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jack",
+      "surname": "Sparrow",
+      "email": "jack.sparrow@test.com",
+      "gender": "Male",
+      "lastLogin": "09-05-2017"
+    },
+    {
+      "id": 2,
+      "name": "Allison",
+      "surname": "Jackson",
+      "email": "allisonj@test.com",
+
+      "date": "14-05-2017"
+    }
+
+  ]
+}

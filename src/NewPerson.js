@@ -42,7 +42,7 @@ export default class NewPerson extends React.Component {
             },
             body: JSON.stringify({
                 "username": this.state.nameValue,
-                "name": "Jack",
+                "name":"",
                 "surnameValue": this.state.surnameValue,
                 "email": this.state.emailValue,
                 "gender": "Male",

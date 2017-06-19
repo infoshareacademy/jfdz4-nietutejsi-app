@@ -7,15 +7,15 @@ class Osoby extends React.Component {
 
         super(props)
         this.state = {
-            users : [ ]
+            profils : [ ]
         }
 
         fetch(
             'https://secret-ocean-59384.herokuapp.com/users'
         ).then(response => response.json()
         ).then(
-            users => this.setState({
-                users:users
+            profils => this.setState({
+                profils:profils
             })
         )
     }
@@ -26,20 +26,23 @@ class Osoby extends React.Component {
             <Table striped bordered condensed hover>
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Surname</th>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
                     <th>Email</th>
-                    <th>Gender</th>
+                    <th>Okazja</th>
+                    <th>Data</th>
                 </tr>
                 </thead>
                 <tbody>
-                {this.state.users.map(
-                    user => (
-                        <tr key={user.id}>
-                            <td >{user.name}</td>
-                            <td>{user.surnameValue}</td>
-                            <td>{user.email}</td>
-                            <td>{user.gender}</td>
+                {this.state.profils.map(
+                    profil => (
+                        <tr key={profil.id}>
+                            <td >{profil.name}</td>
+                            <td>{profil.surnameValue}</td>
+                            <td>{profil.email}</td>
+
+                            <td></td>
+                            <td>{profil.date}</td>
                             <td><Modal /></td>
                         </tr>
                     )
