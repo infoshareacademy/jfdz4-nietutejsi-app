@@ -40,7 +40,7 @@ class Osoby extends React.Component {
                             <td >{profil.name}</td>
                             <td>{profil.surnameValue}</td>
                             <td>{profil.email}</td>
-                            <td>{this.gender}</td>
+                            <td>{profil.gender}</td>
                             <td>{profil.lastLogin}</td>
                             <td><Modal /></td>
                         </tr>
