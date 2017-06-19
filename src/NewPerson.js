@@ -29,23 +29,24 @@ export default class NewPerson extends React.Component {
             surnameValue: event.target.value
         })
         this.handleInputChangeEmail = event => this.setState({
-            nameValue: event.target.value
+            emailValue: event.target.value
         })
     }
 
     handleNewUserCreation = event => {
         event.preventDefault()
-        fetch('https://secret-ocean-59384.herokuapp.com/users', {
+        fetch(' http://localhost:3010/users'
+            , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                "username": this.state.nameValue,
-                "name":"",
+                "username":"",
+                "name":this.state.nameValue,
                 "surnameValue": this.state.surnameValue,
                 "email": this.state.emailValue,
-                "gender": "Male",
+                "gender": this.state.btnTitle,
                 "lastLogin": this.state.startDate
             })
         })
@@ -62,8 +63,9 @@ export default class NewPerson extends React.Component {
     }
 
 
-    render() {
-        console.log(this.state)
+    render()
+    {
+        console.log(this.state.btnTitle)
         return (
             <div>
                 <Form inline onSubmit={this.handleNewUserCreation}>

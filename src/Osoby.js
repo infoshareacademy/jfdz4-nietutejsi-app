@@ -11,7 +11,7 @@ class Osoby extends React.Component {
         }
 
         fetch(
-            'https://secret-ocean-59384.herokuapp.com/users'
+            ' http://localhost:3010/users'
         ).then(response => response.json()
         ).then(
             profils => this.setState({
@@ -40,9 +40,8 @@ class Osoby extends React.Component {
                             <td >{profil.name}</td>
                             <td>{profil.surnameValue}</td>
                             <td>{profil.email}</td>
-
-                            <td></td>
-                            <td>{profil.date}</td>
+                            <td>{this.gender}</td>
+                            <td>{profil.lastLogin}</td>
                             <td><Modal /></td>
                         </tr>
                     )
