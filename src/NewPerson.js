@@ -5,6 +5,7 @@ import React from 'react'
 import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem} from 'react-bootstrap'
 import moment from 'moment';
 import DatePicker from 'react-datepicker';
+import './NewPerson.css'
 
 
 export default class NewPerson extends React.Component {
@@ -67,7 +68,7 @@ export default class NewPerson extends React.Component {
     {
         console.log(this.state.btnTitle)
         return (
-            <div>
+            <div className="main">
                 <Form inline onSubmit={this.handleNewUserCreation}>
                     <FormGroup controlId="formInlineName">
                         <ControlLabel>Imię</ControlLabel>
