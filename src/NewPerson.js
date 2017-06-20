@@ -2,10 +2,12 @@
  * Created by rafalpaluch on 11.06.17.
  */
 import React from 'react'
-import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem} from 'react-bootstrap'
+import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem, Grid} from 'react-bootstrap'
 import moment from 'moment';
 import DatePicker from 'react-datepicker';
-import './NewPerson.css'
+import './NewPerson.css';
+import './DatePicker.css';
+
 
 
 export default class NewPerson extends React.Component {
@@ -68,8 +70,9 @@ export default class NewPerson extends React.Component {
     {
         console.log(this.state.btnTitle)
         return (
-            <div className="main">
-                <Form inline onSubmit={this.handleNewUserCreation}>
+            <Grid className="main">
+
+                <Form onSubmit={this.handleNewUserCreation}>
                     <FormGroup controlId="formInlineName">
                         <ControlLabel>Imię</ControlLabel>
                         {' '}
@@ -88,24 +91,28 @@ export default class NewPerson extends React.Component {
                         <FormControl type="email" placeholder="jan.kowalski@example.com" onChange={this.handleInputChangeEmail}/>
                     </FormGroup>
                     {' '}
-
+                    <Form >
                     <FormGroup>
-                        <div>
-                            <DropdownButton title={this.state.btnTitle} id="bg-vertical-dropdown-1"
+
+
+
+                            <DropdownButton bsSize="large" title={this.state.btnTitle} id="bg-vertical-dropdown-1"
                                             onSelect={this.handleChange}>
                                 <MenuItem eventKey="Urodziny">Urodziny</MenuItem>
                                 <MenuItem eventKey="Imieniny">Imieniny</MenuItem>
                             </DropdownButton>
-                        </div>
-                        <DatePicker
+
+                        <DatePicker className="datePicker"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
                         />
-                        {/*<Button >Wybierz życzenia</Button>*/}
-                        <Button bsStyle="success" type="submit">+</Button>
+                        <Button bsSize="large" >Wybierz życzenia</Button>
+                        <Button bsStyle="success" type="submit" bsSize="large" block>Add person</Button>
                     </FormGroup>
                 </Form>
-            </div>
+
+</Form>
+                </Grid>
         )
 
     }
