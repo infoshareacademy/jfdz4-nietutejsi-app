@@ -105,6 +105,7 @@ export default class NewPerson extends React.Component {
                         <DatePicker className="datePicker"
                             selected={this.state.startDate}
                             onChange={this.handleDateChange}
+                                    //dodać "Wybierz date okazji"//
                         />
                         <Button bsSize="large" >Wybierz życzenia</Button>
                         <Button bsStyle="success" type="submit" bsSize="large" block>Add person</Button>
@@ -117,4 +118,5 @@ export default class NewPerson extends React.Component {
 
     }
 }
+
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Table} from 'react-bootstrap'
+import {Table, Grid} from 'react-bootstrap'
 import Modal from './Modal'
 
 class Osoby extends React.Component {
@@ -23,6 +23,7 @@ class Osoby extends React.Component {
     render() {
 
         return (
+            <Grid>
             <Table striped bordered condensed hover responsive>
                 <thead>
                 <tr>
@@ -31,6 +32,7 @@ class Osoby extends React.Component {
                     <th>Email</th>
                     <th>Okazja</th>
                     <th>Data</th>
+                    <th>Info</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -42,13 +44,14 @@ class Osoby extends React.Component {
                             <td>{profil.email}</td>
                             <td>{profil.gender}</td>
                             <td>{profil.lastLogin}</td>
-                            <td><Modal/></td>
+                            <td><Modal edit={this.state.profils}/></td>
                         </tr>
                     )
                 )
                 }
                 </tbody>
             </Table>
+            </Grid>
         )
 
 
