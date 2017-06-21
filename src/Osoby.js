@@ -22,6 +22,7 @@ class Osoby extends React.Component {
 
     render() {
 
+
         return (
             <Grid>
             <Table striped bordered condensed hover responsive>
@@ -44,7 +45,9 @@ class Osoby extends React.Component {
                             <td>{profil.email}</td>
                             <td>{profil.gender}</td>
                             <td>{profil.lastLogin}</td>
-                            <td><Modal edit={this.state.profils}/></td>
+                            <td><Modal name={this.state.profils.name}
+                                       surname={this.state.profils.surnameValue}
+                            /></td>
                         </tr>
                     )
                 )

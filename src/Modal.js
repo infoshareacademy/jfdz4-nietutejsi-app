@@ -2,6 +2,7 @@ import React from'react'
 import {Button, ButtonToolbar, Modal as BModal} from 'react-bootstrap'
 
 export default class Modal extends React.Component {
+
     state = {show: false
 
     }
@@ -14,7 +15,9 @@ export default class Modal extends React.Component {
         this.setState({show: false});
     }
 
-    render() {
+    render()
+
+    {
         return (
             <ButtonToolbar>
                 <Button bsStyle="primary" onClick={this.showModal}>
@@ -28,7 +31,7 @@ export default class Modal extends React.Component {
                     dialogClassName="custom-modal"
                 >
                     <BModal.Header closeButton>
-                        <BModal.Title id="contained-modal-title-lg">Imię nazwisko</BModal.Title>
+                        <BModal.Title id="contained-modal-title-lg">{this.props.name}</BModal.Title>
                     </BModal.Header>
                     <BModal.Body>
                         <h4>Wrapped Text</h4>
