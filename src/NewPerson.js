@@ -40,6 +40,15 @@ export default class NewPerson extends React.Component {
 
     handleNewUserCreation = event => {
         event.preventDefault()
+        this.setState({
+                btnTitle:'Wybierz okazje',
+                add: null,
+                nameValue: '',
+
+                surnameValue: '',
+                startDate: moment(),
+                emailValue: ''
+        })
         fetch(' http://localhost:3010/users'
             , {
             method: 'POST',
@@ -78,19 +87,19 @@ export default class NewPerson extends React.Component {
                     <FormGroup controlId="formInlineName">
                         <ControlLabel>Imię</ControlLabel>
                         {' '}
-                        <FormControl type="text" placeholder="Jan" onChange={this.handleInputChangeName}/>
+                        <FormControl type="text" placeholder="Jan" onChange={this.handleInputChangeName} value={this.state.nameValue}/>
                     </FormGroup>
                     {' '}
                     <FormGroup controlId="formInlineEmail">
                         <ControlLabel>Nazwisko</ControlLabel>
                         {' '}
-                        <FormControl type="text" placeholder="Kowalski" onChange={this.handleInputChangeSurname}/>
+                        <FormControl type="text" placeholder="Kowalski" onChange={this.handleInputChangeSurname} value={this.state.surnameValue}/>
                     </FormGroup>
                     {' '}
                     <FormGroup controlId="formInlineEmail">
                         <ControlLabel>Email</ControlLabel>
                         {' '}
-                        <FormControl type="email" placeholder="jan.kowalski@example.com" onChange={this.handleInputChangeEmail}/>
+                        <FormControl type="email" placeholder="jan.kowalski@example.com" onChange={this.handleInputChangeEmail} value={this.state.emailValue}/>
                     </FormGroup>
                     {' '}
                     <Form >
