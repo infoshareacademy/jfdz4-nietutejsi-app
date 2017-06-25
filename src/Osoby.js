@@ -1,6 +1,7 @@
 import React from 'react'
 import {Table, Grid} from 'react-bootstrap'
 import Modal from './Modal'
+import moment from 'moment';
 
 class Osoby extends React.Component {
     constructor(props) {
@@ -44,9 +45,9 @@ class Osoby extends React.Component {
                             <td>{profil.surnameValue}</td>
                             <td>{profil.email}</td>
                             <td>{profil.gender}</td>
-                            <td>{profil.lastLogin}</td>
-                            <td><Modal name={this.state.profils.name}
-                                       surname={this.state.profils.surnameValue}
+                            <td>{moment(profil.lastLogin).format('L')}</td>
+                            <td><Modal name={profil.name}
+                                       surname={profil.surnameValue || ''}
                             /></td>
                         </tr>
                     )

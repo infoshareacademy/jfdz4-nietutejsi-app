@@ -25,6 +25,8 @@ export default class NewPerson extends React.Component {
             emailValue: ''
         }
 
+
+
         this.handleInputChangeName = event => this.setState({
             nameValue: event.target.value
         })
@@ -68,7 +70,7 @@ export default class NewPerson extends React.Component {
 
     render()
     {
-        console.log(this.state.btnTitle)
+
         return (
             <Grid className="main">
 
