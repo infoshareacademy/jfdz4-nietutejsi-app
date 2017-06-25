@@ -21,6 +21,10 @@ const noDecoration = {
   textDecoration: 'none'
 }
 
+const profileStyle = {
+  marginRight: '100px'
+}
+
 export default class App extends React.Component {
   render() {
     return (
@@ -37,7 +41,7 @@ export default class App extends React.Component {
             </Nav>
             <Nav pullRight>
               <NavItem>
-                <Link style={noDecoration} to ="/profile">Mój profil</Link>
+                <Link style={noDecoration && profileStyle} to ="/profile">Mój profil</Link>
               </NavItem>
             </Nav>
           </Navbar>
