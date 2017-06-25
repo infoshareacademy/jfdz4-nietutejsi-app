@@ -4,9 +4,11 @@
 import React from 'react'
 import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, MenuItem, Grid} from 'react-bootstrap'
 import moment from 'moment';
+import { ToastContainer, ToastMessageFactory} from 'react-toastr'
 import DatePicker from 'react-datepicker';
 import './NewPerson.css';
 import './DatePicker.css';
+
 
 
 
@@ -76,14 +78,32 @@ export default class NewPerson extends React.Component {
         });
     }
 
+    addAlert =() => {
+        this.refs.container.success(
+            "Dodałeś nową osobę bucu",
+            "", {
+                timeOut: 30000,
+                extendedTimeOut: 10000
+            });
+
+    }
 
     render()
     {
 
-        return (
-            <Grid className="main">
+        return (<div>
 
-                <Form onSubmit={this.handleNewUserCreation}>
+                <ToastContainer ref="container"
+                                     toastMessageFactory={ToastMessageFactory}
+                                     className="toast-top-right" />
+
+
+
+
+
+                        <Grid className="main">
+
+                <Form onSubmit={this.handleNewUserCreation} >
                     <FormGroup controlId="formInlineName">
                         <ControlLabel>Imię</ControlLabel>
                         {' '}
@@ -119,12 +139,13 @@ export default class NewPerson extends React.Component {
                                     //dodać "Wybierz date okazji"//
                         />
                         <Button bsSize="large" >Wybierz życzenia</Button>
-                        <Button bsStyle="success" type="submit" bsSize="large" block>Add person</Button>
+                        <Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addAlert}>Add person</Button>
                     </FormGroup>
                 </Form>
 
 </Form>
                 </Grid>
+            </div>
         )
 
     }

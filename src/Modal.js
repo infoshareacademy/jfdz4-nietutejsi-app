@@ -20,8 +20,8 @@ export default class Modal extends React.Component {
     {
         return (
             <ButtonToolbar>
-                <Button bsStyle="primary" onClick={this.showModal}>
-                    Wyświetl wszystkie życzenia solenizanta
+                <Button bsStyle="primary" onClick={this.showModal} style={{'width': '100%'}}>
+                    Wyświetl
                 </Button>
 
                 <BModal

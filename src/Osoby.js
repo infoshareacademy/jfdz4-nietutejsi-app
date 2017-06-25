@@ -34,7 +34,7 @@ class Osoby extends React.Component {
                     <th>Email</th>
                     <th>Okazja</th>
                     <th>Data</th>
-                    <th>Info</th>
+                    <th>Wszystkie życzenia</th>
                 </tr>
                 </thead>
                 <tbody>
