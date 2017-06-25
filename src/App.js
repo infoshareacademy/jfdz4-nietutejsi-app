@@ -41,7 +41,7 @@ export default class App extends React.Component {
             </Nav>
             <Nav pullRight>
               <NavItem>
-                <Link style={noDecoration && profileStyle} to ="/profile">Mój profil</Link>
+                <Link style={noDecoration && profileStyle} to="/profile">Mój profil</Link>
               </NavItem>
             </Nav>
           </Navbar>
