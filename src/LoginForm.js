@@ -102,9 +102,7 @@ class LoginForm extends React.Component {
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
                             <input type="submit" value="Zaloguj się" />
-                            <Button type="submit">
-                            Zaloguj
-                            </Button>
+                            
                         </Col>
                     </FormGroup>
                 </Form>
