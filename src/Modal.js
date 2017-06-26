@@ -29,15 +29,14 @@ export default class Modal extends React.Component {
                     show={this.state.show}
                     onHide={this.hideModal}
                     dialogClassName="custom-modal"
+
                 >
                     <BModal.Header closeButton>
                         <BModal.Title id="contained-modal-title-lg">{this.props.name} {this.props.surname}</BModal.Title>
                     </BModal.Header>
                     <BModal.Body>
-                        <h4>Wrapped Text</h4>
-                        <p>illo omnis laborum hic enim minima! Similique. Dolor voluptatum reprehenderit nihil adipisci aperiam voluptatem soluta
-                            magnam accusamus iste incidunt tempore consequatur illo illo odit. Asperiores nesciunt iusto nemo animi ratione. Sunt odit similique doloribus temporibus reiciendis! Ullam. Dolor dolores veniam animi sequi dolores molestias voluptatem iure velit. Elit dolore quaerat incidunt enim aut distinctio. Ratione molestiae laboriosam
-                            similique laboriosam eum et nemo expedita. Consequuntur perspiciatis cumque dolorem.</p>
+                        <h4>Dodane życzenia</h4>
+                        <p>Tutaj dodane będa życzenia</p>
                     </BModal.Body>
                     <BModal.Footer>
                         <Button onClick={this.hideModal}>Close</Button>

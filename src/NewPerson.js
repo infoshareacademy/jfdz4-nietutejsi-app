@@ -80,7 +80,7 @@ export default class NewPerson extends React.Component {
 
     addAlert =() => {
         this.refs.container.success(
-            "Dodałeś nową osobę bucu",
+            "Dodałeś nową osobę!",
             "", {
                 timeOut: 30000,
                 extendedTimeOut: 10000
@@ -96,10 +96,6 @@ export default class NewPerson extends React.Component {
                 <ToastContainer ref="container"
                                      toastMessageFactory={ToastMessageFactory}
                                      className="toast-top-right" />
-
-
-
-
 
                         <Grid className="main">
 
