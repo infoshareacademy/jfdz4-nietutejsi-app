@@ -2,61 +2,61 @@
   {
     "id": 1,
     "content": "Niech ten radosny, wspaniały dzień, na zawsze Twe troski, odsunie w cień. I niech się śmieje do Ciebie świat, blaskiem szczęśliwych i długich lat.",
-    "eventType": "birthday"
+    "eventType": "Urodziny"
   },
   {
     "id": 2,
     "content": "Z okazji urodzin przyjmij z głębi serca płynące życzenia samych pogodnych, szczęśliwych dni, pełnych ciepła, radości i spełnionych marzeń…",
-    "eventType": "birthday"
+    "eventType": "Urodziny"
   },
   {
     "id": 3,
     "content": "Wszystko, co piękne i wymarzone, niech w Twym życiu będzie spełnione. Niech życie słodko płynie, a wszystko, co złe, niech szybko minie.",
-    "eventType": "birthday"
+    "eventType": "Urodziny"
   },
   {
     "id": 4,
     "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu.",
-    "eventType": "nameday"
+    "eventType": "Imieniny"
   },
   {
     "id": 5,
     "content": "W dniu Twych imienin, moja kochana, życzę Ci pięknych chwil już od rana, lekkich wieczorów i gorących nocy, niech nigdy blasku nie tracą Twe oczy!",
-    "eventType": "nameday"
+    "eventType": "Imieniny"
   },
   {
     "id": 6,
     "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu.",
-    "eventType": "nameday"
+    "eventType": "Imieniny"
   },
   {
     "id": 7,
     "content": "Serdecznych świąt otulonych śniegiem i ciepłem rodzinnym oraz wiele szczęścia w Nowym Roku.",
-    "eventType": "chrisEve"
+    "eventType": "Boże Narodzenie"
   },
   {
     "id": 8,
     "content": "Pada śnieg, suną sanki, jest renifer i bałwanki. Śnieżki z nieba spadają, życzenia zdrowych świąt składają. Niech te święta będą wyjątkowe, a prezenty odlotowe.",
-    "eventType": "chrisEve"
+    "eventType": "Boże Narodzenie"
   },
   {
     "id": 9,
     "content": "Zielone gałązki, a na każdej świeczka, W stroiku z bibułek stoi choineczka Gdy zaświeci gwiazdka między gałązkami, Wesołą kolędę dla niej zaśpiewamy.",
-    "eventType": "chrisEve"
+    "eventType": "Boże Narodzenie"
   },
   {
     "id": 10,
     "content": "Niech Zmartwychwstały Pan będzie obecny w naszych domach, niech opromienia nas blaskiem swej miłości i przemienia to, co szare, w kwitnący ogród… Najserdeczniejsze życzenia wielkanocne składa…",
-    "eventType": "easter"
+    "eventType": "Wielkanoc"
   },
   {
     "id": 11,
     "content": "Niech zajączek szczodry będzie i z jajeczkiem do Was przybędzie, niech święconka smaczna będzie, a w dyngusa woda wszędzie.",
-    "eventType": "easter"
+    "eventType": "Wielkanoc"
   },
   {
     "id": 12,
     "content": "Serdeczne życzenia radości i siły płynącej z istoty Świąt Wielkanocnych, by uśmiech i wiosenny optymizm towarzyszyły Wam każdego dnia.",
-    "eventType": "easter"
+    "eventType": "Wielkanoc"
   }
 ]
