@@ -53,15 +53,15 @@ handleSubmit = event => {
         console.log(error);
         document.getElementById('quickstart-sign-in').disabled = false;
         // [END_EXCLUDE]
+        // \\ TODO move to app if authorized
     });
-
 }
     render() {
         return (
             <div>
                 <Col componentClass={ControlLabel} sm={6} smOffset={4}>
                     <p><h3><strong>zaloguj się</strong></h3></p>
-                <Form horizontal onSubmit={this.handleSubmit}>
+                <Form horizontal>
 
                     {/*komentarz <FormGroup controlId="formHorizontalName">
                         <Col componentClass={ControlLabel} sm={2}>
@@ -112,7 +112,7 @@ handleSubmit = event => {
                             Hasło
                         </Col>
                         <Col sm={8}>
-                            <FormControl type="Password" placeholder="Password"/>
+                            <FormControl type="Password" placeholder="Password" onChange={this.handleUserPass}/>
                         </Col>
                     </FormGroup>
 
@@ -124,8 +124,7 @@ handleSubmit = event => {
 
                     <FormGroup>
                         <Col smOffset={2} sm={10}>
-                            <input type="submit" value="Zaloguj się" />
-                            
+                            <button type="button" onClick={this.handleSubmit}>Zaloguj się</button>
                         </Col>
                     </FormGroup>
                 </Form>

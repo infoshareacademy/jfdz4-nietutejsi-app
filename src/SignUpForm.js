@@ -20,11 +20,27 @@ export default class SignUpForm extends React.Component {
             password: ''
         }
 
-        this.handleSignUp = () => firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
-            data => console.log('data: ', data)
-        ).catch(
-            error => console.log('error: ', error)
-        )
+        this.handleUserEmail = event => {
+
+            this.setState({
+                email: event.target.value
+            })
+
+        }
+
+        this.handleUserPass = event =>
+            this.setState ({
+                password: event.target.value
+            })
+
+
+        this.handleSignUp = () => {
+            firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
+                data => console.log('data: ', data)
+            ).catch(
+                error => console.log('error: ', error)
+            )
+        }
     }
     render () {
         return (
@@ -57,6 +73,7 @@ export default class SignUpForm extends React.Component {
                                 <FormControl
                                     type="email"
                                     placeholder="E-mail"
+                                    onChange={this.handleUserEmail}
                                 />
                             </Col>
                         </FormGroup>
@@ -92,10 +109,11 @@ export default class SignUpForm extends React.Component {
                                 Hasło
                             </Col>
                             <Col sm={8}>
-                                <FormControl type="Password" placeholder="Password"/>
+                                <FormControl type="Password" placeholder="Password" onChange={this.handleUserPass}/>
                             </Col>
                         </FormGroup>
 
+                        {/*\\ TODO check if both password inputs match*/}
                         <FormGroup controlId="formHorizontalPassword">
                             <Col componentClass={ControlLabel} sm={2}>
                                 Powtórz hasło
@@ -107,9 +125,11 @@ export default class SignUpForm extends React.Component {
 
                         <FormGroup>
                             <Col smOffset={2} sm={10}>
-                                <input onClick={this.handleSignUp} type="submit" value="Zarejestruj się" />
+                                <button type="button" onClick={this.handleSignUp}>Zarejestruj się!</button>
                             </Col>
                         </FormGroup>
+
+                        {/*\\ TODO reCaptcha (package installed)*/}
                     </Form>
                 </Col>
             </div>
