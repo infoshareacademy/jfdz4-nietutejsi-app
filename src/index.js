@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Wishes from './Wishes';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Wishes />,
   document.getElementById('root')
 );
