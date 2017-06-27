@@ -6,7 +6,8 @@ class Wishes extends Component {
     super(props)
 
       this.state = {
-        greetings: []
+        greetings: [],
+        searchValue: ''
       }
       fetch(
           process.env.PUBLIC_URL + '/data/greetings.json'
@@ -17,12 +18,16 @@ class Wishes extends Component {
               greetings: greetings
           })
       )
+
+      this.handleSearch = event => this.setState ({
+          searchValue: event.target.value
+      })
   }
 
   render() {
     return (
       <div>
-        <input type="text" placeholder="Szukaj życzeń!"/>
+        <input type="text" placeholder="Szukaj życzeń!" onChange={this.handleSearch}/>
         <table>
           <thead>
           <tr>
@@ -36,11 +41,22 @@ class Wishes extends Component {
           </thead>
           <tbody>
           {
-              this.state.greetings.map(
+              this.state.greetings.filter(
+              wish => (
+              this.state.searchValue === '' ? true : [
+              wish.content,
+              wish.eventType
+              ].map(
+              wish => wish.toLowerCase()
+              ).some(searchValue => searchValue.includes(this.state.searchValue.toLowerCase()
+              )
+              )
+              )
+              ).map(
                   wish => (
                       <tr key={wish.id}>
                         <td>
-                            {wish.eventType === 'birthday' ? "Urodziny" : wish.eventType === 'nameday' ? "Imieniny" : wish.eventType === 'chrisEve' ? 'Boże Narodzenie' : wish.eventType === 'easter' ? 'Wielkanoc' : null }
+                            {wish.eventType}
                         </td>
                         <td>
                             {wish.content}
