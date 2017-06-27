@@ -1,5 +1,5 @@
 {
-  "Urodziny": [
+  "birthday": [
   {
     "id": 1,
     "content": "Niech ten radosny, wspaniały dzień, na zawsze Twe troski, odsunie w cień. I niech się śmieje do Ciebie świat, blaskiem szczęśliwych i długich lat."
@@ -13,7 +13,7 @@
     "content": "Wszystko, co piękne i wymarzone, niech w Twym życiu będzie spełnione. Niech życie słodko płynie, a wszystko, co złe, niech szybko minie."
   }
     ],
-  "Imieniny": [
+  "nameday": [
   {
     "id": 4,
     "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu."
@@ -27,7 +27,7 @@
     "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu."
   }
     ],
-  "Boże Narodzenie": [
+  "chrisEve": [
   {
     "id": 7,
     "content": "Serdecznych świąt otulonych śniegiem i ciepłem rodzinnym oraz wiele szczęścia w Nowym Roku."
@@ -41,7 +41,7 @@
     "content": "Zielone gałązki, a na każdej świeczka, W stroiku z bibułek stoi choineczka Gdy zaświeci gwiazdka między gałązkami, Wesołą kolędę dla niej zaśpiewamy."
   }
     ],
-  "Wielkanoc": [
+  "easter": [
   {
     "id": 10,
     "content": "Niech Zmartwychwstały Pan będzie obecny w naszych domach, niech opromienia nas blaskiem swej miłości i przemienia to, co szare, w kwitnący ogród… Najserdeczniejsze życzenia wielkanocne składa…"
