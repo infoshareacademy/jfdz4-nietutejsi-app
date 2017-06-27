@@ -3,6 +3,7 @@ import {Table, Grid} from 'react-bootstrap'
 import Modal from './Modal'
 import moment from 'moment';
 
+
 class Osoby extends React.Component {
     constructor(props) {
 
@@ -25,10 +26,13 @@ class Osoby extends React.Component {
 
 
         return (
+
             <Grid>
-            <Table striped bordered condensed hover responsive>
+                <div className="scroll">
+                <Table striped bordered condensed hover responsive>
                 <thead>
                 <tr>
+
                     <th>Imię</th>
                     <th>Nazwisko</th>
                     <th>Email</th>
@@ -55,7 +59,9 @@ class Osoby extends React.Component {
                 }
                 </tbody>
             </Table>
+                </div>
             </Grid>
+
         )
 
 
