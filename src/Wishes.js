@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import Star from './Star'
 
 class Wishes extends Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class Wishes extends Component {
         this.state = {
             greetings: [],
             searchValue: ''
+        //     star: 'white'
         }
         fetch(
             process.env.PUBLIC_URL + '/data/greetings.json'
@@ -22,6 +24,9 @@ class Wishes extends Component {
         this.handleSearch = event => this.setState({
             searchValue: event.target.value
         })
+        // this.showStar= () => {this.setState({
+        //     star: 'yellow'
+        // })}
     }
 
     render() {
@@ -37,6 +42,9 @@ class Wishes extends Component {
                   <th>
                     Treść
                   </th>
+                    <th>
+                        <p>Dodaj do ulubionych</p>
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
@@ -61,6 +69,11 @@ class Wishes extends Component {
                               <td>
                                   {wish.content}
                               </td>
+                                <td>
+                                    <Star/>
+
+
+                                </td>
                             </tr>
                         )
                     )
