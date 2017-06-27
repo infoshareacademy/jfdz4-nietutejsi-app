@@ -22,6 +22,35 @@ class Wishes extends Component {
   render() {
     return (
       <div>
+        <input type="text" placeholder="Szukaj życzeń!"/>
+        <table>
+          <thead>
+          <tr>
+            <th>
+              Rodzaj
+            </th>
+            <th>
+              Treść
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          {
+              this.state.greetings.map(
+                  wish => (
+                      <tr key={wish.id}>
+                        <td>
+                            {wish.eventType === 'birthday' ? "Urodziny" : wish.eventType === 'nameday' ? "Imieniny" : wish.eventType === 'chrisEve' ? 'Boże Narodzenie' : wish.eventType === 'easter' ? 'Wielkanoc' : null }
+                        </td>
+                        <td>
+                            {wish.content}
+                        </td>
+                      </tr>
+                  )
+              )
+          }
+          </tbody>
+        </table>
       </div>
     );
   }
