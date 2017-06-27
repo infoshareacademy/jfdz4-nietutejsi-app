@@ -12,6 +12,20 @@ import {
 } from 'react-bootstrap';
 
 export default class SignUpForm extends React.Component {
+    constructor(props) {
+        super()
+
+        this.state = {
+            email: '',
+            password: ''
+        }
+
+        this.handleSignUp = () => firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
+            data => console.log('data: ', data)
+        ).catch(
+            error => console.log('error: ', error)
+        )
+    }
     render () {
         return (
             <div>
@@ -93,7 +107,7 @@ export default class SignUpForm extends React.Component {
 
                         <FormGroup>
                             <Col smOffset={2} sm={10}>
-                                <input type="submit" value="Zarejestruj się" />
+                                <input onClick={this.handleSignUp} type="submit" value="Zarejestruj się" />
                             </Col>
                         </FormGroup>
                     </Form>

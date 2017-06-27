@@ -20,22 +20,27 @@ class LoginForm extends React.Component {
         super(props)
 
         this.state = {
-            userName: '',
+            userEmail: '',
             userPass: ''
         }
 
-        this.handleUserName = event => {
+        this.handleUserEmail = event => {
 
             this.setState({
-                userName: event.target.value
+                userEmail: event.target.value
             })
 
         }
 
+        this.handleUserPass = event =>
+            this.setState ({
+                userPass: event.target.value
+            })
+
     }
 handleSubmit = event => {
 
-    firebase.auth().signInWithEmailAndPassword(this.state.userName, this.state.userPass).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(this.state.userEmail, this.state.userPass).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -80,10 +85,10 @@ handleSubmit = event => {
                         </Col>
                         <Col sm={8}>
                             <FormControl
-                                value={this.state.userName}
+                                value={this.state.userEmail}
                                 type="email"
                                 placeholder="Login"
-                                onChange={this.handleUserName}
+                                onChange={this.handleUserEmail}
                             />
                         </Col>
                     </FormGroup>
