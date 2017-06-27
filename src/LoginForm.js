@@ -4,14 +4,14 @@
 import React from 'react';
 import './LoginForm.css';
 import firebase from 'firebase'
+import SignUpForm from './SignUpForm'
 import {
     Col,
     FormGroup,
     FormControl,
     ControlLabel,
     Form,
-    Checkbox,
-    Button
+    Checkbox
 } from 'react-bootstrap';
 
 class LoginForm extends React.Component {
@@ -35,7 +35,7 @@ class LoginForm extends React.Component {
     }
 handleSubmit = event => {
 
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(this.state.userName, this.state.userPass).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -125,6 +125,7 @@ handleSubmit = event => {
                     </FormGroup>
                 </Form>
                     </Col>
+                <SignUpForm/>
             </div>
 
         )
