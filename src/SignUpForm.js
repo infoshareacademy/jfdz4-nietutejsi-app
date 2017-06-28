@@ -125,7 +125,7 @@ export default class SignUpForm extends React.Component {
 
                         <FormGroup>
                             <Col smOffset={2} sm={10}>
-                                <button type="button" onClick={this.handleSignUp}>Zarejestruj się!</button>
+                                <button type="button" onClick={this.handleSignUp}>Zarejestruj się</button>
                             </Col>
                         </FormGroup>
 
