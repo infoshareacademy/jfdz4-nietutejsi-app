@@ -129,7 +129,6 @@ handleSubmit = event => {
                     </FormGroup>
                 </Form>
                     </Col>
-                <SignUpForm/>
             </div>
 
         )

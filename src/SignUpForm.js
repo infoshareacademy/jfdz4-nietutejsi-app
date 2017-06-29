@@ -10,12 +10,14 @@ import {
     Checkbox,
     Button
 } from 'react-bootstrap';
+import TestView from './TestView'
 
 export default class SignUpForm extends React.Component {
     constructor(props) {
         super()
 
         this.state = {
+            user: null,
             email: '',
             password: '',
             repeatPassword: '',
@@ -73,6 +75,17 @@ export default class SignUpForm extends React.Component {
     }
 
     componentWillMount() {
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.setState({
+                    user: user
+                })
+            } else {
+                this.setState({
+                    user: null
+                })
+            }
+        });
         this.handleAntiBotCheck = () => {
             this.setState({
                 aNumber: Math.ceil(Math.random() * 9),
