@@ -17,7 +17,8 @@ export default class SignUpForm extends React.Component {
 
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            repeatPassword: ''
         }
 
         this.handleUserEmail = event => {
@@ -33,13 +34,24 @@ export default class SignUpForm extends React.Component {
                 password: event.target.value
             })
 
-
+        this.handleUserPassRepeat = event =>
+            this.setState ({
+                repeatPassword: event.target.value
+            })
         this.handleSignUp = () => {
-            firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
-                data => console.log('data: ', data)
-            ).catch(
-                error => console.log('error: ', error)
-            )
+            if (this.state.password === this.state.repeatPassword) {
+                firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
+                    data => console.log('data: ', data)
+                ).catch(
+                    error => console.log('error: ', error)
+                )
+            } else {
+                alert('Źle powtórzone hasło');
+                this.setState({
+                    password: '',
+                    repeatPassword: ''
+                })
+            }
         }
     }
     render () {
@@ -109,7 +121,7 @@ export default class SignUpForm extends React.Component {
                                 Hasło
                             </Col>
                             <Col sm={8}>
-                                <FormControl type="Password" placeholder="Password" onChange={this.handleUserPass}/>
+                                <FormControl type="Password" value={this.state.password} placeholder="Password" onChange={this.handleUserPass}/>
                             </Col>
                         </FormGroup>
 
@@ -119,7 +131,7 @@ export default class SignUpForm extends React.Component {
                                 Powtórz hasło
                             </Col>
                             <Col sm={8}>
-                                <FormControl type="Password" placeholder="Repeat password"/>
+                                <FormControl value={this.state.repeatPassword} onChange={this.handleUserPassRepeat} type="Password" placeholder="Repeat password"/>
                             </Col>
                         </FormGroup>
 
