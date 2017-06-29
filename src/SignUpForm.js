@@ -18,7 +18,8 @@ export default class SignUpForm extends React.Component {
         this.state = {
             email: '',
             password: '',
-            repeatPassword: ''
+            repeatPassword: '',
+            userResult: ''
         }
 
         this.handleUserEmail = event => {
@@ -27,6 +28,13 @@ export default class SignUpForm extends React.Component {
                 email: event.target.value
             })
 
+        }
+
+        this.handleUserResult = event => {
+
+            this.setState({
+                userResult: event.target.value
+            })
         }
 
         this.handleUserPass = event =>
@@ -39,20 +47,42 @@ export default class SignUpForm extends React.Component {
                 repeatPassword: event.target.value
             })
         this.handleSignUp = () => {
-            if (this.state.password === this.state.repeatPassword) {
+            if (this.state.password === this.state.repeatPassword && this.state.result.toString() === this.state.userResult) {
                 firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(
                     data => console.log('data: ', data)
                 ).catch(
                     error => console.log('error: ', error)
                 )
-            } else {
+                this.setState({
+                    password: '',
+                    repeatPassword: '',
+                    email: '',
+                    userResult: '',
+                })
+                this.handleAntiBotCheck()
+            } else if (this.state.password !== this.state.repeatPassword) {
                 alert('Źle powtórzone hasło');
                 this.setState({
                     password: '',
                     repeatPassword: ''
                 })
+            } else if (this.state.result.toString() !== this.state.userResult) {
+                alert('Zły wynik obliczeń')
             }
         }
+    }
+
+    componentWillMount() {
+        this.handleAntiBotCheck = () => {
+            this.setState({
+                aNumber: Math.ceil(Math.random() * 9),
+                bNumber: Math.ceil(Math.random() * 9),
+            })
+            setTimeout(() => this.setState({
+                result: this.state.aNumber + this.state.bNumber
+            }), 10)
+        }
+        this.handleAntiBotCheck()
     }
     render () {
         return (
@@ -132,6 +162,15 @@ export default class SignUpForm extends React.Component {
                             </Col>
                             <Col sm={8}>
                                 <FormControl value={this.state.repeatPassword} onChange={this.handleUserPassRepeat} type="Password" placeholder="Repeat password"/>
+                            </Col>
+                        </FormGroup>
+
+                        <FormGroup controlId="formHorizontalPassword">
+                            <Col componentClass={ControlLabel} sm={2}>
+                                Czy jesteś botem?
+                            </Col>
+                            <Col sm={8}>
+                                <FormControl value={this.state.userResult} onChange={this.handleUserResult} placeholder={this.state.aNumber.toString() + ' + ' + this.state.bNumber.toString()}/>
                             </Col>
                         </FormGroup>
 
