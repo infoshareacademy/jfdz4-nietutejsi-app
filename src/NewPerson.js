@@ -6,6 +6,7 @@ import {Form, FormGroup, ControlLabel, FormControl, Button, DropdownButton, Menu
 import moment from 'moment';
 import { ToastContainer, ToastMessageFactory} from 'react-toastr'
 import DatePicker from 'react-datepicker';
+import ChooseWishes from './ChooseWishes'
 import './NewPerson.css';
 import './DatePicker.css';
 
@@ -134,7 +135,7 @@ export default class NewPerson extends React.Component {
                             onChange={this.handleDateChange}
                                     //dodać "Wybierz date okazji"//
                         />
-                        <Button bsSize="large" >Wybierz życzenia</Button>
+                        <ChooseWishes/>
                         <Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addAlert}>Add person</Button>
                     </FormGroup>
                 </Form>
