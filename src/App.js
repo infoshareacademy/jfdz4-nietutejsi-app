@@ -2,7 +2,9 @@ import React from 'react';
 import {
   Nav,
   NavItem,
-  Navbar
+  Navbar,
+  NavDropdown,
+  MenuItem
 } from 'react-bootstrap';
 import {
   BrowserRouter,
@@ -18,7 +20,8 @@ const logoStyle = {
 }
 
 const noDecoration = {
-  textDecoration: 'none'
+  textDecoration: 'none',
+  color: 'black'
 }
 
 const profileStyle = {
@@ -32,7 +35,9 @@ export default class App extends React.Component {
         <BrowserRouter>
           <Navbar>
             <Nav>
+              <Link to="/">
               <img style={logoStyle} src={process.env.PUBLIC_URL + '/images/wishbook-logo.png'} alt=""/>
+              </Link>
             </Nav>
             <Nav>
               <NavItem>
@@ -40,9 +45,11 @@ export default class App extends React.Component {
               </NavItem>
             </Nav>
             <Nav pullRight>
-              <NavItem>
-                <Link style={noDecoration && profileStyle} to="/profile">Mój profil</Link>
-              </NavItem>
+              <NavDropdown title="Menu">
+                <MenuItem><Link style={noDecoration} to="/profile">Mój profil</Link></MenuItem>
+                <MenuItem divider/>
+                <MenuItem>Wyloguj się</MenuItem>
+              </NavDropdown>
             </Nav>
           </Navbar>
         </BrowserRouter>
