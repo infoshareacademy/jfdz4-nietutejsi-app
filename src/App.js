@@ -4,11 +4,13 @@ import {
   NavItem,
   Navbar,
   NavDropdown,
-  MenuItem
+  MenuItem,
+  Grid
 } from 'react-bootstrap';
 import {
   BrowserRouter,
-  Link
+  Link,
+  Route
 } from 'react-router-dom'
 import './App.css';
 
@@ -25,7 +27,7 @@ const noDecoration = {
 }
 
 const profileStyle = {
-  marginRight: '100px'
+  marginRight: '50px'
 }
 
 export default class App extends React.Component {
@@ -33,6 +35,7 @@ export default class App extends React.Component {
     return (
       <div>
         <BrowserRouter>
+          <Grid>
           <Navbar>
             <Nav>
               <Link to="/">
@@ -45,13 +48,17 @@ export default class App extends React.Component {
               </NavItem>
             </Nav>
             <Nav pullRight>
-              <NavDropdown title="Menu">
+              <NavDropdown style={profileStyle} title="Menu">
                 <MenuItem><Link style={noDecoration} to="/profile">Mój profil</Link></MenuItem>
                 <MenuItem divider/>
                 <MenuItem>Wyloguj się</MenuItem>
               </NavDropdown>
             </Nav>
           </Navbar>
+
+          <Route path="/wishes"/>
+          <Route path="/profile"/>
+          </Grid>
         </BrowserRouter>
       </div>
     )
