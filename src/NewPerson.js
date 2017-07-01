@@ -125,11 +125,11 @@ export default class NewPerson extends React.Component {
 
 
 
-                            <DropdownButton bsSize="large" title={this.state.btnTitle} id="bg-vertical-dropdown-1"
-                                            onSelect={this.handleChange}>
-                                <MenuItem eventKey="Urodziny">Urodziny</MenuItem>
-                                <MenuItem eventKey="Imieniny">Imieniny</MenuItem>
-                            </DropdownButton>
+                            {/*<DropdownButton bsSize="large" title={this.state.btnTitle} id="bg-vertical-dropdown-1"*/}
+                                            {/*onSelect={this.handleChange}>*/}
+                                {/*<MenuItem eventKey="Urodziny">Urodziny</MenuItem>*/}
+                                {/*<MenuItem eventKey="Imieniny">Imieniny</MenuItem>*/}
+                            {/*</DropdownButton>*/}
 
                         <DatePicker className="datePicker"
                             selected={this.state.startDate}
@@ -137,7 +137,7 @@ export default class NewPerson extends React.Component {
                                     //dodać "Wybierz date okazji"//
                         />
                         <ChooseWishes/>
-                        <Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addAlert}>Add person</Button>
+                        <Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addAlert}>Dodaj osobę</Button>
                     </FormGroup>
                 </Form>
 
