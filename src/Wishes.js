@@ -5,18 +5,11 @@ import Star from './Star'
 class Wishes extends Component {
     constructor(props) {
         super(props)
-
-        this.state = {
+            this.state = {
             greetings: [],
             searchValue: '',
             //     star: 'white'
             favoriteGreetings: []
-        }
-
-        this.state = {
-            greetings: [],
-            searchValue: ''
-        //     star: 'white'
         }
         fetch(
             process.env.PUBLIC_URL + '/data/greetings.json'
@@ -25,17 +18,13 @@ class Wishes extends Component {
         ).then(
             greetings => this.setState({
                 greetings: greetings
-            })
-        )
-
+            },() => {
+            this.state.greetings.filter(
+                greating => this.state.favoriteGreetings.includes(greating.id)
+            )}))
         this.handleSearch = event => this.setState({
             searchValue: event.target.value
-        })
-        // this.showStar= () => {this.setState({
-        //     star: 'yellow'
-        // })}
-    }
-
+        })}
     render() {
         return (
             <div>
