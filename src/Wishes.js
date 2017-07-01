@@ -8,6 +8,13 @@ class Wishes extends Component {
 
         this.state = {
             greetings: [],
+            searchValue: '',
+            //     star: 'white'
+            favoriteGreetings: []
+        }
+
+        this.state = {
+            greetings: [],
             searchValue: ''
         //     star: 'white'
         }
