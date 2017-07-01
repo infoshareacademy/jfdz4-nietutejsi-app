@@ -5,10 +5,10 @@ import {
 import './App.css';
 import UserList from './UserList';
 
-const App = () => (
+const UserListView = () => (
   <Grid>
     <UserList/>
   </Grid>
 )
 
-export default App;
+export default UserListView;
