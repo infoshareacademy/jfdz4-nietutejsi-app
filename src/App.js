@@ -14,7 +14,7 @@ import React, { Component } from 'react';
 import './App.css';
 import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
-import TestView from './TestView'
+import AppView from './AppView'
 import firebase from 'firebase'
 
 class App extends Component {
@@ -35,20 +35,20 @@ class App extends Component {
             }
         });
     }
-  render() {
-    return (
-        <div>
-            {
-                this.state.user === null ?
-                    <div>
-                        <LoginForm/>
-                        <SignUpForm/>
-                    </div> :
-                    <TestView/>
-            }
-        </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                {
+                    this.state.user === null ?
+                        <div>
+                            <LoginForm/>
+                            <SignUpForm/>
+                        </div> :
+                        <AppView/>
+                }
+            </div>
+        );
+    }
 }
 
 export default App;
