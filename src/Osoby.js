@@ -27,7 +27,7 @@ class Osoby extends React.Component {
 
         return (
 
-            <Grid>
+            <Grid className="main">
                 <div className="scroll">
                 <Table striped bordered condensed hover responsive>
                 <thead>
