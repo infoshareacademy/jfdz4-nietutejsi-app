@@ -53,7 +53,7 @@ handleSubmit = event => {
         console.log(error);
         document.getElementById('quickstart-sign-in').disabled = false;
         // [END_EXCLUDE]
-        // \\ TODO move to app if authorized
+
     });
 }
     render() {
