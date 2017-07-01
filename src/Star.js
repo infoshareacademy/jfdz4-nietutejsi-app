@@ -4,6 +4,7 @@ class Star extends React.Component {
     constructor(props) {
     super(props)
         this.state= {
+            greetings: [],
         star: 'white',
             favoriteGreetings: []
         }
@@ -11,8 +12,6 @@ class Star extends React.Component {
             star: 'yellow'
         })}
     }
-
-
     render(){
         return(
             <div>
