@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "username": "jckspr87",
+    "name": "Jack",
+    "surname": "Sparrow",
+    "gender": "Male",
+    "email": "jack.sparrow@test.com",
+    "lastLogin": "09-05-2017",
+    "lastLoginGetTime": 1496959200000
+  },
+  {
+    "id": 2,
+    "username": "allison97",
+    "name": "Allison",
+    "surname": "Jackson",
+    "gender": "Female",
+    "email": "allisonj@test.com",
+    "lastLogin": "14-05-2017",
+    "lastLoginGetTime": 1497391200000
+  },
+  {
+    "id": 3,
+    "username": "frytekiuszxx",
+    "name": "Brian",
+    "surname": "Frytek",
+    "gender": "Male",
+    "email": "frytekiusz@test.com",
+    "lastLogin": "01-01-2017",
+    "lastLoginGetTime": 1485903600000
+  },
+  {
+    "id": 4,
+    "username": "johnmahjong",
+    "name": "Oswald",
+    "surname": "Hobbes",
+    "gender": "Male",
+    "email": "hobbes.o@test.com",
+    "lastLogin": "01-05-2017",
+    "lastLoginGetTime": 1496268000000
+  },
+  {
+    "id": 5,
+    "username": "bluebear",
+    "name": "Roman",
+    "surname": "Jager",
+    "gender": "Male",
+    "email": "bluebear1958@test.com",
+    "lastLogin": "27-04-2017",
+    "lastLoginGetTime": 1495836000000
+  },
+  {
+    "id": 6,
+    "username": "greatbuddy",
+    "name": "Cilla",
+    "surname": "Jiang",
+    "gender": "Female",
+    "email": "cjiang@test.com",
+    "lastLogin": "12-04-2017",
+    "lastLoginGetTime": 1494540000000
+  },
+  {
+    "id": 7,
+    "username": "acidiclow",
+    "name": "Janine",
+    "surname": "Niftrik",
+    "gender": "Female",
+    "email": "acidicflow55@test.com",
+    "lastLogin": "04-05-2017",
+    "lastLoginGetTime": 1496527200000
+  },
+  {
+    "id": 8,
+    "username": "sandstonejumping",
+    "name": "Desideria",
+    "surname": "Sawyer",
+    "gender": "Female",
+    "email": "dessaw@test.com",
+    "lastLogin": "02-03-2017",
+    "lastLoginGetTime": 1491084000000
+  },
+  {
+    "id": 9,
+    "username": "elevenwan",
+    "name": "Sile",
+    "surname": "Clinton",
+    "gender": "Male",
+    "email": "wan11@test.com",
+    "lastLogin": "18-02-2017",
+    "lastLoginGetTime": 1489791600000
+  },
+  {
+    "id": 10,
+    "username": "beautifulgarlic",
+    "name": "Igerna",
+    "surname": "Kasun",
+    "gender": "Female",
+    "email": "beautygar@test.com",
+    "lastLogin": "09-01-2017",
+    "lastLoginGetTime": 1486594800000
+  }
+]
