@@ -20,26 +20,18 @@ class Star extends React.Component {
         )
 
         this.showStar= () => {this.setState({
-            star: 'yellow'
-        })}
-    }
+            star: this.state.star === 'white' ? 'yellow' : 'white'
+        })}}
 
     render(){
         return(
-            <div>{
-                this.state.greetings.map(
-                    greeting => (
-
-                        <img  onClick={ () =>{this.showStar
-                this.setState({
-                favoriteGreetings: this.state.favoriteGreetings.filter(
-                  id => id !== greeting.id).concat(greeting.id)})}}
-
-                              style={{"width": "40px"}}
-                              src={"/gwiazda.png"}
-                              alt="gwiazda"/>))}
+            <div>
+            <img onClick={() => {
+                this.showStar()
+            }}
+                 style={{"width": "40px"}}
+                 src={this.state.star === 'white' ? "/gwiazda.png" : "/gwiazda2.png"}
+                 alt="gwiazda"/>
             </div>
-        )
-    }
-}
+        )}}
 export default Star

@@ -32,7 +32,7 @@ class Wishes extends Component {
               <table>
                 <thead>
                 <tr>
-                  <th>
+                  <th className="title1">
                     Rodzaj
                   </th>
                   <th>
