@@ -29,28 +29,30 @@ componentWillMount() {
             wishes: wishes
         }))
 }
-addWish= event => {
-        event.preventDefault()
+addWish= (id, content, eventType) => {
     fetch(
-        process.env.PUBLIC_URL + '/data/addedWishes.json', {
+        'http://localhost:3020/wishes',
+
+        {
             method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
             body: JSON.stringify({
-                "id":this.state.id,
-                "content":this.state.content,
-                "eventType":this.state.eventType
+                "id": id,
+                "content":content,
+                "eventType":eventType
             })
         }
 
-    ).then(
-        response => response.json()
-    ).then(
-        wishes => this.setState({
-            wishes: wishes
-        }))
+    )
 
 }
 
-    render()
+
+    render(
+    )
+
 
     {
         return (
@@ -68,7 +70,7 @@ addWish= event => {
                     <BModal.Header closeButton>
                         <BModal.Title id="contained-modal-title-lg">{this.props.name} {this.props.surname}</BModal.Title>
                     </BModal.Header>
-                    <BModal.Body>
+                    <BModal.Body >
                             <div>
                                 <Table striped bordered condensed hover responsive>
                                     <thead>
@@ -86,7 +88,11 @@ addWish= event => {
                                             <tr key={wish.id}>
                                                 <td >{wish.eventType}</td>
                                                 <td>{wish.content}</td>
-                                                <td><Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addWish}>Dodaj życzenia</Button></td>
+                                                <td><Button bsStyle="success"
+                                                            type="submit"
+                                                            bsSize="large"
+                                                            block
+                                                            onClick={() => this.addWish(wish.id, wish.content, wish.eventType)}>Dodaj życzenia</Button></td>
 
 
                                             </tr>

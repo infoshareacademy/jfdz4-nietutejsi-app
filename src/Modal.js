@@ -15,6 +15,7 @@ export default class Modal extends React.Component {
         this.setState({show: false});
     }
 
+
     render()
 
     {
