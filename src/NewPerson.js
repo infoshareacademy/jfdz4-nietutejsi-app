@@ -64,7 +64,8 @@ export default class NewPerson extends React.Component {
                 "surnameValue": this.state.surnameValue,
                 "email": this.state.emailValue,
                 "gender": this.state.btnTitle,
-                "lastLogin": this.state.startDate
+                "lastLogin": this.state.startDate,
+
             })
         })
     }

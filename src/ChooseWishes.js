@@ -58,7 +58,7 @@ addWish= (id, content, eventType) => {
         return (
 
             <ButtonToolbar>
-                <Button bsStyle="primary" onClick={this.showModal} >
+                <Button bsStyle="primary" onClick={this.showModal} style={{'width': '100%'}} >
                     Wybierz Życzenia
                 </Button>
 
@@ -92,7 +92,7 @@ addWish= (id, content, eventType) => {
                                                             type="submit"
                                                             bsSize="large"
                                                             block
-                                                            onClick={() => this.addWish(wish.id, wish.content, wish.eventType)}>Dodaj życzenia</Button></td>
+                                                            onClick={() => this.addWish(wish.id, wish.content, wish.eventType)} >Dodaj życzenia</Button></td>
 
 
                                             </tr>

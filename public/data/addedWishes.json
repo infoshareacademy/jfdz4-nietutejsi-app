@@ -19,6 +19,16 @@
       "id": 12,
       "content": "Serdeczne życzenia radości i siły płynącej z istoty Świąt Wielkanocnych, by uśmiech i wiosenny optymizm towarzyszyły Wam każdego dnia.",
       "eventType": "Wielkanoc"
+    },
+    {
+      "id": 1,
+      "content": "Niech ten radosny, wspaniały dzień, na zawsze Twe troski, odsunie w cień. I niech się śmieje do Ciebie świat, blaskiem szczęśliwych i długich lat.",
+      "eventType": "Urodziny"
+    },
+    {
+      "id": 10,
+      "content": "Niech Zmartwychwstały Pan będzie obecny w naszych domach, niech opromienia nas blaskiem swej miłości i przemienia to, co szare, w kwitnący ogród… Najserdeczniejsze życzenia wielkanocne składa…",
+      "eventType": "Wielkanoc"
     }
   ]
 }
