@@ -13,6 +13,7 @@ import {
   Route
 } from 'react-router-dom'
 import './App.css';
+import firebase from 'firebase'
 
 const logoStyle = {
   maxWidth: '50%',
@@ -51,7 +52,7 @@ export default class AppView extends React.Component {
               <NavDropdown style={profileStyle} title="Menu">
                 <MenuItem><Link style={noDecoration} to="/profile">Mój profil</Link></MenuItem>
                 <MenuItem divider/>
-                <MenuItem>Wyloguj się</MenuItem>
+                <MenuItem onClick={() => firebase.auth().signOut()}>Wyloguj się</MenuItem>
               </NavDropdown>
             </Nav>
           </Navbar>
