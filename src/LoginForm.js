@@ -1,10 +1,6 @@
-/**
- * Created by agnieszkaw on 14.05.17.
- */
 import React from 'react';
 import './LoginForm.css';
 import firebase from 'firebase'
-import SignUpForm from './SignUpForm'
 import {
     Col,
     FormGroup,
@@ -41,10 +37,9 @@ class LoginForm extends React.Component {
 handleSubmit = event => {
 
     firebase.auth().signInWithEmailAndPassword(this.state.userEmail, this.state.userPass).catch(function(error) {
-        // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
-        // [START_EXCLUDE]
+
         if (errorCode === 'auth/wrong-password') {
             alert('Wrong password.');
         } else {
@@ -52,7 +47,6 @@ handleSubmit = event => {
         }
         console.log(error);
         document.getElementById('quickstart-sign-in').disabled = false;
-        // [END_EXCLUDE]
 
     });
 }
@@ -62,23 +56,6 @@ handleSubmit = event => {
                 <Col componentClass={ControlLabel}>
                     <p><h3><strong>zaloguj się</strong></h3></p>
                 <Form horizontal>
-
-                    {/*komentarz <FormGroup controlId="formHorizontalName">
-                        <Col componentClass={ControlLabel} sm={2}>
-                            Imię
-                        </Col>
-                        <Col sm={8}>
-                            <FormControl value={this.state.userName} type="email"placeholder="Name onChange={this.handleUserName} />
-                        </Col>
-                    </FormGroup>
-                     FormGroup controlId="formHorizontalSurname">
-                        <Col componentClass={ControlLabel} sm={2}>
-                            Nazwisko
-                        </Col>
-                       <Col sm={8}>
-                           <FormControl value={this.state.userName} type="email" onChange={this.handleUserName}/>
-                        </Col>
-                    </FormGroup>koniec komentarza*/}
                     <FormGroup controlId="formHorizontalLogin">
                         <Col componentClass={ControlLabel} sm={4}>
                             Użytkownik
@@ -92,20 +69,6 @@ handleSubmit = event => {
                             />
                         </Col>
                     </FormGroup>
-
-                    {/*<FormGroup controlId="formHorizontalEmail">
-                        <Col componentClass={ControlLabel} sm={2}>
-                            E-mail
-                        </Col>
-                        <Col sm={10}>
-                            <FormControl
-                                value={this.state.userName}
-                                type="email"
-                                placeholder="Email"
-                                onChange={this.handleUserName}
-                            />
-                        </Col>
-                    </FormGroup>*/}
 
                     <FormGroup controlId="formHorizontalPassword">
                         <Col componentClass={ControlLabel} sm={4}>

@@ -103,23 +103,6 @@ export default class SignUpForm extends React.Component {
                 <Col componentClass={ControlLabel}>
                     <p><h3><strong>Zarejestruj się</strong></h3></p>
                     <Form horizontal>
-
-                        {/*komentarz <FormGroup controlId="formHorizontalName">
-                         <Col componentClass={ControlLabel} sm={2}>
-                         Imię
-                         </Col>
-                         <Col sm={8}>
-                         <FormControl value={this.state.userName} type="email"placeholder="Name onChange={this.handleUserName} />
-                         </Col>
-                         </FormGroup>
-                         FormGroup controlId="formHorizontalSurname">
-                         <Col componentClass={ControlLabel} sm={2}>
-                         Nazwisko
-                         </Col>
-                         <Col sm={8}>
-                         <FormControl value={this.state.userName} type="email" onChange={this.handleUserName}/>
-                         </Col>
-                         </FormGroup>koniec komentarza*/}
                         <FormGroup controlId="formHorizontalLogin">
                             <Col componentClass={ControlLabel} sm={4}>
                                 E-mail
@@ -133,18 +116,6 @@ export default class SignUpForm extends React.Component {
                             </Col>
                         </FormGroup>
 
-                        <FormGroup controlId="formHorizontalLogin">
-                            <Col componentClass={ControlLabel} sm={4}>
-                                Nazwa użytkownika
-                            </Col>
-                            <Col sm={8}>
-                                <FormControl
-                                    type="email"
-                                    placeholder="Username"
-                                />
-                            </Col>
-                        </FormGroup>
-
                         <FormGroup controlId="formHorizontalPassword">
                             <Col componentClass={ControlLabel} sm={4}>
                                 Hasło
@@ -154,7 +125,6 @@ export default class SignUpForm extends React.Component {
                             </Col>
                         </FormGroup>
 
-                        {/*\\ TODO check if both password inputs match*/}
                         <FormGroup controlId="formHorizontalPassword">
                             <Col componentClass={ControlLabel} sm={4}>
                                 Powtórz hasło
@@ -179,7 +149,6 @@ export default class SignUpForm extends React.Component {
                             </Col>
                         </FormGroup>
 
-                        {/*\\ TODO reCaptcha (package installed)*/}
                     </Form>
                 </Col>
             </div>
