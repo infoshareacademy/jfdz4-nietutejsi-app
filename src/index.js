@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import firebase from 'firebase'
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
+import 'react-datepicker/dist/react-datepicker.css'
+import './animateToaster.css'
+import './toasterSolo.css'
+import './Osoby.css'
 import App from './App';
 import './index.css';
 import { Provider } from 'react-redux'
@@ -23,7 +27,7 @@ firebase.initializeApp(config);
 
 ReactDOM.render(
     <Provider store={store}>
-     <App />
+      <App />
     </Provider>,
     document.getElementById('root')
 );
