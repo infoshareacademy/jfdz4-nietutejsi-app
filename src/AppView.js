@@ -13,6 +13,7 @@ import {
   Route
 } from 'react-router-dom'
 import Wishes from './Wishes'
+import StartView from './StartView'
 import './App.css';
 import firebase from 'firebase'
 
@@ -58,6 +59,7 @@ export default class AppView extends React.Component {
             </Nav>
           </Navbar>
 
+          <Route exact path="/" component={StartView}/>
           <Route path="/wishes" component={Wishes}/>
           <Route path="/profile"/>
           </Grid>
