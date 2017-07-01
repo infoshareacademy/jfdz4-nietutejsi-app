@@ -21,9 +21,6 @@ firebase.initializeApp(config);
 
 
 ReactDOM.render(
-  <Provider store={store}>
       <App />,
-    <UserListView/>
-  </Provider>,
   document.getElementById('root')
 );

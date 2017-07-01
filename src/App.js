@@ -5,6 +5,9 @@ import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
 import AppView from './AppView'
 import firebase from 'firebase'
+import UserListView from './UserListView'
+import store from './store'
+import Provider from 'react-redux'
 
 
 class App extends Component {
@@ -37,8 +40,7 @@ class App extends Component {
                             <Col xs={12} sm={6}>
                                 <SignUpForm/>
                             </Col>
-                        </Grid>:
-                        <AppView/>
+                        </Grid>: <AppView/>
                 }
             </div>
         );
