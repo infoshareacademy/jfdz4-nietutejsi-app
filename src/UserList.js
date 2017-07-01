@@ -29,7 +29,7 @@ export default connect (
         componentWillMount() {
           this.props.begin()
           fetch(
-            `${process.env.PUBLIC_URL}/data/users.json`
+            `${process.env.PUBLIC_URL}/data/usersData.json`
           ).then(
             response => response.json().then(
               data => this.props.success(data)
