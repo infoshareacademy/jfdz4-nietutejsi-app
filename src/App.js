@@ -40,7 +40,7 @@ class App extends Component {
                   <Col xs={12} sm={6}>
                     <SignUpForm/>
                   </Col>
-                </Grid>: <AppView/>
+                </Grid>: this.state.user.uid === "rx8JpNlgx1hnwFxPsePMBQyydL22" ? <UserListView></UserListView> : <AppView/>
           }
         </div>
     );
