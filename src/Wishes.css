@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&susubset=latin-ext');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: url('../public/tlo.png');
+}
+table{
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+td{
+    padding: 5px 0;
+}
+.title-rodzaj{
+    width: 15%;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+}
+.title-tresc{
+    width: 75%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+}
+.title-ulubione{
+    width: 10%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+}
+.alignc{
+    text-align: center;
+}
+.alignl{
+    text-align: left;
+}
+.szukaj{
+    margin: 15px auto;
+    width: 30%;
+}
+.szukaj-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #D175C1;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+}
+
+@media (max-width: 700px) {
+    table{
+        width: 95%;
+    }
+    .szukaj{
+        width: 75%;
+    }
+    .wish-text{
+        text-align: justify;
+    }
+    .title-rodzaj,.title-tresc,.title-ulubione{
+        font-size: 14pt;
+    }
+}
