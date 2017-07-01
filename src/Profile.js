@@ -18,7 +18,7 @@ import Osoby from './Osoby'
 import NewPerson from './NewPerson'
 
 
-class App extends Component {
+class Profile extends Component {
     render() {
         return (
             <Router>
@@ -58,4 +58,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Profile;

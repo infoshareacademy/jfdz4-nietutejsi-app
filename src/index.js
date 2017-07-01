@@ -10,10 +10,10 @@ import './Osoby.css'
 
 
 
-import App from './App';
+import Profile from './Profile';
 import './index.css';
 
 ReactDOM.render(
-      <App />,
+      <Profile />,
   document.getElementById('root')
 );
