@@ -1,24 +1,24 @@
 {
   "wishes": [
     {
-      "id": "H1BSg7rV-"
-    },
-    {
-      "id": "S1p2emS4b"
-    },
-    {
-      "id": "Hydj-QB4Z"
-    },
-    {
-      "id": "rk4_DmrE-"
-    },
-    {
-      "id": "r1H197r4Z"
-    },
-    {
       "id": 5,
       "content": "W dniu Twych imienin, moja kochana, życzę Ci pięknych chwil już od rana, lekkich wieczorów i gorących nocy, niech nigdy blasku nie tracą Twe oczy!",
       "eventType": "Imieniny"
+    },
+    {
+      "id": 3,
+      "content": "Wszystko, co piękne i wymarzone, niech w Twym życiu będzie spełnione. Niech życie słodko płynie, a wszystko, co złe, niech szybko minie.",
+      "eventType": "Urodziny"
+    },
+    {
+      "id": 7,
+      "content": "Serdecznych świąt otulonych śniegiem i ciepłem rodzinnym oraz wiele szczęścia w Nowym Roku.",
+      "eventType": "Boże Narodzenie"
+    },
+    {
+      "id": 12,
+      "content": "Serdeczne życzenia radości i siły płynącej z istoty Świąt Wielkanocnych, by uśmiech i wiosenny optymizm towarzyszyły Wam każdego dnia.",
+      "eventType": "Wielkanoc"
     }
   ]
 }

@@ -41,9 +41,9 @@ class App extends Component {
 
                                             <NavItem eventKey={2} href="#">Dodaj nową osobę</NavItem>
                                         </LinkContainer>
-                                        <LinkContainer to="/Życzenia">
-                                            <NavItem eventKey={2} href="#">Życzenia</NavItem>
-                                        </LinkContainer>
+                                        {/*<LinkContainer to="/Życzenia">*/}
+                                            {/*<NavItem eventKey={2} href="#">Życzenia</NavItem>*/}
+                                        {/*</LinkContainer>*/}
                                     </Nav>
                                 </Navbar>
                             </Col>

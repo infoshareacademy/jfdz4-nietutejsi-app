@@ -1,10 +1,10 @@
 import React from'react'
-import {Button, ButtonToolbar, Modal as BModal} from 'react-bootstrap'
+import {Table, Button, ButtonToolbar, Modal as BModal} from 'react-bootstrap'
 
 export default class Modal extends React.Component {
 
-    state = {show: false
-
+    state = {show: false,
+    wishes:[]
     }
 
     showModal =() => {
@@ -13,6 +13,16 @@ export default class Modal extends React.Component {
 
     hideModal = () => {
         this.setState({show: false});
+    }
+    componentWillMount() {
+        fetch(
+             ' http://localhost:3020/wishes'
+        ).then(response => response.json()
+        ).then(
+            wishes => this.setState({
+                wishes:wishes
+            })
+        )
     }
 
 
@@ -35,10 +45,29 @@ export default class Modal extends React.Component {
                     <BModal.Header closeButton>
                         <BModal.Title id="contained-modal-title-lg">{this.props.name} {this.props.surname}</BModal.Title>
                     </BModal.Header>
-                    <BModal.Body>
-                        <h4>Dodane życzenia</h4>
-                        <p>Tutaj dodane będa życzenia</p>
-                    </BModal.Body>
+                    <BModal.Body >
+                        <Table striped bordered condensed hover responsive>
+                            <thead>
+                            <tr>
+                                <th>Rodzaj życzenia</th>
+                                <th>Życzenie</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {
+                                this.state.wishes.map(
+                                    wish => (
+                                        <tr key={wish.id}>
+                                            <td>{wish.eventType}</td>
+                                            <td>{wish.content}</td>
+                                        </tr>
+                                    )
+                                )
+                            }
+                            </tbody>
+
+                        </Table>
+                    </BModal.Body >
                     <BModal.Footer>
                         <Button onClick={this.hideModal}>Close</Button>
                     </BModal.Footer>
