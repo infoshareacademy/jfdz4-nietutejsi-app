@@ -58,8 +58,8 @@ handleSubmit = event => {
 }
     render() {
         return (
-            <div>
-                <Col componentClass={ControlLabel} sm={6} smOffset={4}>
+            <div style={{textAlign: 'center'}}>
+                <Col componentClass={ControlLabel}>
                     <p><h3><strong>zaloguj się</strong></h3></p>
                 <Form horizontal>
 
@@ -80,7 +80,7 @@ handleSubmit = event => {
                         </Col>
                     </FormGroup>koniec komentarza*/}
                     <FormGroup controlId="formHorizontalLogin">
-                        <Col componentClass={ControlLabel} sm={2}>
+                        <Col componentClass={ControlLabel} sm={4}>
                             Użytkownik
                         </Col>
                         <Col sm={8}>
@@ -108,7 +108,7 @@ handleSubmit = event => {
                     </FormGroup>*/}
 
                     <FormGroup controlId="formHorizontalPassword">
-                        <Col componentClass={ControlLabel} sm={2}>
+                        <Col componentClass={ControlLabel} sm={4}>
                             Hasło
                         </Col>
                         <Col sm={8}>

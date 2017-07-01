@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
-// import {
-// BrowserRouter as Router,
-// Route
-// } from 'react-router-dom'
-// import {
-// Grid,
-//
-// }
-// from 'react-bootstrap'
-
-
-//import logo from './logo.svg';
+import {Grid, Col} from 'react-bootstrap'
 import './App.css';
 import LoginForm from './LoginForm'
 import SignUpForm from './SignUpForm'
 import AppView from './AppView'
 import firebase from 'firebase'
+
 
 class App extends Component {
 
@@ -40,10 +30,14 @@ class App extends Component {
             <div>
                 {
                     this.state.user === null ?
-                        <div>
-                            <LoginForm/>
-                            <SignUpForm/>
-                        </div> :
+                        <Grid>
+                            <Col xs={12} sm={6}>
+                                <LoginForm/>
+                            </Col>
+                            <Col xs={12} sm={6}>
+                                <SignUpForm/>
+                            </Col>
+                        </Grid>:
                         <AppView/>
                 }
             </div>
