@@ -29,7 +29,26 @@ componentWillMount() {
             wishes: wishes
         }))
 }
+addWish= event => {
+        event.preventDefault()
+    fetch(
+        process.env.PUBLIC_URL + '/data/addedWishes.json', {
+            method:'POST',
+            body: JSON.stringify({
+                "id":this.state.id,
+                "content":this.state.content,
+                "eventType":this.state.eventType
+            })
+        }
 
+    ).then(
+        response => response.json()
+    ).then(
+        wishes => this.setState({
+            wishes: wishes
+        }))
+
+}
 
     render()
 
@@ -57,6 +76,7 @@ componentWillMount() {
 
                                         <th>Rodzaj</th>
                                         <th>Treść</th>
+                                        <th>Dodaj życzenia</th>
 
                                     </tr>
                                     </thead>
@@ -66,6 +86,8 @@ componentWillMount() {
                                             <tr key={wish.id}>
                                                 <td >{wish.eventType}</td>
                                                 <td>{wish.content}</td>
+                                                <td><Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addWish}>Dodaj życzenia</Button></td>
+
 
                                             </tr>
                                         )
