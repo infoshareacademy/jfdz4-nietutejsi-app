@@ -29,6 +29,11 @@
       "id": 10,
       "content": "Niech Zmartwychwstały Pan będzie obecny w naszych domach, niech opromienia nas blaskiem swej miłości i przemienia to, co szare, w kwitnący ogród… Najserdeczniejsze życzenia wielkanocne składa…",
       "eventType": "Wielkanoc"
+    },
+    {
+      "id": 4,
+      "content": "W dniu Twych imienin, w dniu Twego święta, serce mi bije, serce pamięta, niech więc życzenia lecą listownie, bo nie mam szansy przekazać słownie, niech lecą prędko do swego celu, niech będą pierwsze wśród życzeń wielu.",
+      "eventType": "Imieniny"
     }
   ]
 }
