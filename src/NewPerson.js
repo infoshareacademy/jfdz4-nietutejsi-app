@@ -52,7 +52,7 @@ export default class NewPerson extends React.Component {
                 startDate: moment(),
                 emailValue: ''
         })
-        fetch(' http://localhost:3010/users'
+        fetch(' https://wishatabase.herokuapp.com/users'
             , {
             method: 'POST',
             headers: {

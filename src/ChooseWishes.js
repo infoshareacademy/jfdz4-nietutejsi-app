@@ -31,7 +31,7 @@ componentWillMount() {
 }
 addWish= (id, content, eventType) => {
     fetch(
-        'http://localhost:3020/wishes',
+        'https://wishatabase.herokuapp.com/addedWishes',
 
         {
             method:'POST',

@@ -16,7 +16,7 @@ export default class Modal extends React.Component {
     }
     componentWillMount() {
         fetch(
-             ' http://localhost:3020/wishes'
+             ' https://wishatabase.herokuapp.com/addedWishes'
         ).then(response => response.json()
         ).then(
             wishes => this.setState({
