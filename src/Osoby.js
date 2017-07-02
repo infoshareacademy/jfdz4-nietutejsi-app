@@ -13,7 +13,7 @@ class Osoby extends React.Component {
         }
 
         fetch(
-            ' http://localhost:3010/users'
+            ' https://wishatabase.herokuapp.com/users'
         ).then(response => response.json()
         ).then(
             profils => this.setState({
