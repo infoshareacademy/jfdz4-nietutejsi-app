@@ -129,6 +129,8 @@ export default class NewPerson extends React.Component {
                                             onSelect={this.handleChange}>
                                 <MenuItem eventKey="Urodziny">Urodziny</MenuItem>
                                 <MenuItem eventKey="Imieniny">Imieniny</MenuItem>
+                                <MenuItem eventKey="Wielkanoc">Wielkanoc</MenuItem>
+                                <MenuItem eventKey="Boże Narodzenie">Boże Narodzenie</MenuItem>
                             </DropdownButton>
 
                         <DatePicker className="datePicker"
@@ -137,7 +139,7 @@ export default class NewPerson extends React.Component {
                                     //dodać "Wybierz date okazji"//
                         />
                         <ChooseWishes/>
-                        <Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addAlert}>Add person</Button>
+                        <Button bsStyle="success" type="submit" bsSize="large" block onClick={this.addAlert}>Dodaj osobę</Button>
                     </FormGroup>
                 </Form>
 

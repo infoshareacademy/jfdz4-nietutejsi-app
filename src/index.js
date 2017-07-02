@@ -14,12 +14,12 @@ import store from './store'
 
 
 var config = {
-  apiKey: "AIzaSyCYOjye_OjER-kEt-FjrOenCi7QjI75ivY",
-  authDomain: "nietutejsi-526ca.firebaseapp.com",
-  databaseURL: "https://nietutejsi-526ca.firebaseio.com",
-  projectId: "nietutejsi-526ca",
-  storageBucket: "",
-  messagingSenderId: "752237085066"
+    apiKey: "AIzaSyCYOjye_OjER-kEt-FjrOenCi7QjI75ivY",
+    authDomain: "nietutejsi-526ca.firebaseapp.com",
+    databaseURL: "https://nietutejsi-526ca.firebaseio.com",
+    projectId: "nietutejsi-526ca",
+    storageBucket: "",
+    messagingSenderId: "752237085066"
 };
 firebase.initializeApp(config);
 
@@ -27,7 +27,6 @@ firebase.initializeApp(config);
 
 ReactDOM.render(
     <Provider store={store}>
-      <App />
+        <App />
     </Provider>,
     document.getElementById('root')
-);
