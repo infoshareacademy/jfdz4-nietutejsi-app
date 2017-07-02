@@ -125,11 +125,13 @@ export default class NewPerson extends React.Component {
 
 
 
-                            {/*<DropdownButton bsSize="large" title={this.state.btnTitle} id="bg-vertical-dropdown-1"*/}
-                                            {/*onSelect={this.handleChange}>*/}
-                                {/*<MenuItem eventKey="Urodziny">Urodziny</MenuItem>*/}
-                                {/*<MenuItem eventKey="Imieniny">Imieniny</MenuItem>*/}
-                            {/*</DropdownButton>*/}
+                            <DropdownButton bsSize="large" title={this.state.btnTitle} id="bg-vertical-dropdown-1"
+                                            onSelect={this.handleChange}>
+                                <MenuItem eventKey="Urodziny">Urodziny</MenuItem>
+                                <MenuItem eventKey="Imieniny">Imieniny</MenuItem>
+                                <MenuItem eventKey="Wielkanoc">Wielkanoc</MenuItem>
+                                <MenuItem eventKey="Boże Narodzenie">Boże Narodzenie</MenuItem>
+                            </DropdownButton>
 
                         <DatePicker className="datePicker"
                             selected={this.state.startDate}
